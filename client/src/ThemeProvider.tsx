@@ -20,18 +20,25 @@ interface ThemeProviderProps {
 export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>('light');
 
+  // Apply initial theme on component mount
   useEffect(() => {
-    // Initialize theme from localStorage or default to light
-    const storedTheme = localStorage.getItem('theme') as Theme | null;
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
     
+    // Check if theme is saved in localStorage
+    const storedTheme = localStorage.getItem('theme') as Theme | null;
     if (storedTheme) {
       setTheme(storedTheme);
+      document.documentElement.classList.remove('light', 'dark');
+      document.documentElement.classList.add(storedTheme);
+    } else {
+      // Set to light theme by default
+      localStorage.setItem('theme', 'light');
     }
-    // Default to light theme regardless of system preference
   }, []);
 
   useEffect(() => {
-    // Apply theme to document
+    // Apply theme to document when theme changes
     document.documentElement.classList.remove('light', 'dark');
     document.documentElement.classList.add(theme);
     localStorage.setItem('theme', theme);

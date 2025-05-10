@@ -9,7 +9,7 @@ import CallToAction from "@/components/home/CallToAction";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-white dark:bg-neutral-900">
       <Helmet>
         <title>Rahul Tours Sri Lanka - Discover the Pearl of the Indian Ocean</title>
         <meta 
@@ -30,6 +30,6 @@ export default function Home() {
       <VehicleSection />
       <TestimonialsSection />
       <CallToAction />
-    </>
+    </div>
   );
 }

@@ -57,7 +57,11 @@ export default function Navbar() {
             className="text-neutral-600 dark:text-neutral-300 hover:text-primary dark:hover:text-primary-light p-2 rounded-full"
             aria-label="Toggle theme"
           >
-            <i className={`fa-solid ${theme === 'dark' ? 'fa-sun' : 'fa-moon'} text-lg`}></i>
+            {theme === 'dark' ? (
+              <i className="fa-solid fa-sun text-lg"></i>
+            ) : (
+              <i className="fa-solid fa-moon text-lg"></i>
+            )}
           </button>
 
           <button
