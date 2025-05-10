@@ -5,7 +5,6 @@ import DestinationShowcase from "@/components/home/DestinationShowcase";
 import ExperienceShowcase from "@/components/home/ExperienceShowcase";
 import VehicleSection from "@/components/home/VehicleSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
-import CallToAction from "@/components/home/CallToAction";
 
 export default function Home() {
   return (
@@ -29,7 +28,6 @@ export default function Home() {
       <ExperienceShowcase />
       <VehicleSection />
       <TestimonialsSection />
-      <CallToAction />
     </div>
   );
 }
