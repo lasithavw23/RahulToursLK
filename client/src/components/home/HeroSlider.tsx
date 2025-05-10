@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { HERO_IMAGES } from "@/lib/constants";
-import SearchBox from "./SearchBox";
 import { Phone, MessageCircle, Star, CheckCircle } from "lucide-react";
 
 export default function HeroSlider() {
@@ -52,7 +51,7 @@ export default function HeroSlider() {
                     +94 74 227 1900
                   </p>
                 </button>
-                <button className="chat-button">
+                <button className="chat-button whatsapp">
                   <MessageCircle size={20} />
                   <p className="button-text">
                     <span>Chat on WhatsApp</span>
@@ -82,9 +81,6 @@ export default function HeroSlider() {
           </div>
         </div>
       ))}
-
-      {/* Search Box Component */}
-      <SearchBox />
     </section>
   );
 }

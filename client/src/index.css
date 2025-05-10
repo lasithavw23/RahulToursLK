@@ -116,6 +116,12 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
+  .chat-button.whatsapp {
+    background-color: #25D366; /* WhatsApp green color */
+    color: white;
+    border: none;
+  }
+
   .button-text {
     text-align: left;
     line-height: 1.2;

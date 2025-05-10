@@ -1,0 +1,132 @@
+
+import { Check, Info } from "lucide-react";
+import "./VehicleSection.scss";
+
+// Import vehicle images
+import kdhVan from "../../assets/imgs/kdh.png";
+import priusImg from "../../assets/imgs/prius.png";
+
+interface VehicleItem {
+  id: number;
+  name: string;
+  image: string;
+  type: string;
+  description?: string;
+  isPopular?: boolean;
+  isLuxury?: boolean;
+}
+
+const vehicles: VehicleItem[] = [
+  {
+    id: 1,
+    name: "Toyota Hiace KDH Van",
+    image: kdhVan,
+    type: "Most Popular",
+    description: "Comfortable minivan for group tours",
+    isPopular: true
+  },
+  {
+    id: 2,
+    name: "Toyota Prius 3rd Gen Car",
+    image: priusImg,
+    type: "Luxury Travel",
+    description: "Eco-friendly luxury sedan",
+    isLuxury: true
+  }
+];
+
+const VehicleSection = () => {
+  return (
+    <section className="vehicles-section">
+      <div className="container">
+        <div
+          className="section-header"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="section-title">Travel in Comfort & Style</h2>
+          <p className="section-description">
+            Experience top-tier comfort and safety with our premium tour vehicles
+          </p>
+        </div>
+
+        <div className="vehicles-grid">
+          {vehicles.map((vehicle, index) => (
+            <div
+              key={vehicle.id}
+              className="vehicle-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+            >
+              <div className="vehicle-image-container">
+                <img src={vehicle.image} alt={vehicle.name} className="vehicle-image" />
+                <span className={`vehicle-badge ${vehicle.isLuxury ? 'luxury' : 'popular'}`}>
+                  {vehicle.type}
+                </span>
+              </div>
+              
+              <div className="vehicle-content">
+                <h3 className="vehicle-name">{vehicle.name}</h3>
+                {vehicle.description && (
+                  <p className="vehicle-description">{vehicle.description}</p>
+                )}
+                
+                <div className="vehicle-details">
+                  <div className="included-features">
+                    <h4 className="features-title">
+                      <span>Included:</span>
+                    </h4>
+                    <ul className="features-list">
+                      <li>
+                        <Check size={16} className="icon-check" />
+                        <span>Car, fuel, driver</span>
+                      </li>
+                      <li>
+                        <Check size={16} className="icon-check" />
+                        <span>Driver accommodation</span>
+                      </li>
+                      <li>
+                        <Check size={16} className="icon-check" />
+                        <span>Highway toll fee, parking</span>
+                      </li>
+                      <li>
+                        <Check size={16} className="icon-check" />
+                        <span>Paging service</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="excluded-features">
+                    <h4 className="features-title">
+                      <span>Excluded:</span>
+                    </h4>
+                    <ul className="features-list">
+                      <li>
+                        <Info size={16} className="icon-info" />
+                        <span>Entrance tickets</span>
+                      </li>
+                      <li>
+                        <Info size={16} className="icon-info" />
+                        <span>Train & boat tickets</span>
+                      </li>
+                      <li>
+                        <Info size={16} className="icon-info" />
+                        <span>Boat safari fees</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default VehicleSection;
