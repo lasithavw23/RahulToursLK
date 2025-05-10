@@ -4,6 +4,9 @@ import { NAV_LINKS } from "@/lib/constants";
 import { useTheme } from "@/hooks/use-theme";
 import BookingModal from "@/components/booking/BookingModal";
 
+// Import the logo
+import logo from "@/assets/logo.png";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBookingModal, setShowBookingModal] = useState(false);
@@ -27,9 +30,7 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center px-4 py-4 md:px-6">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center">
-            <span className="text-primary text-2xl font-display font-bold">
-              Dear<span className="text-accent">Sri</span>Lanka
-            </span>
+            <img src={logo} alt="Rahul Tours Sri Lanka" className="h-10 md:h-12" />
           </Link>
         </div>
 

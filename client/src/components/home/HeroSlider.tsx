@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
 import { HERO_IMAGES } from "@/lib/constants";
 import SearchBox from "./SearchBox";
+import { Phone, MessageCircle, Star, CheckCircle } from "lucide-react";
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -44,18 +44,39 @@ export default function HeroSlider() {
                 className="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
                 style={{ animationDelay: "0.4s" }}
               >
-                <Link
-                  href="/tours"
-                  className="bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-md transition text-center"
-                >
-                  Explore Tours
-                </Link>
-                <Link
-                  href="/destinations"
-                  className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white font-medium px-6 py-3 rounded-md transition text-center"
-                >
-                  View Destinations
-                </Link>
+                <button className="call-button">
+                  <Phone size={20} />
+                  <p className="button-text">
+                    <span>Call Us Now</span>
+                    <br />
+                    +94 74 227 1900
+                  </p>
+                </button>
+                <button className="chat-button">
+                  <MessageCircle size={20} />
+                  <p className="button-text">
+                    <span>Chat on WhatsApp</span>
+                    <br />
+                    Quick Response
+                  </p>
+                </button>
+              </div>
+              
+              <div className="hero-details animate-fadeInUp" style={{ animationDelay: "0.6s" }}>
+                <div className="review">
+                  <span className="rating flex al-center">
+                    4.9 <Star className="icon" />
+                  </span>
+                  <span className="reviews-count">500+ Reviews</span>
+                </div>
+                <div className="guide">
+                  <CheckCircle className="icon-check" />
+                  <span className="guide-text">Licensed Guide</span>
+                </div>
+                <div className="price">
+                  <CheckCircle className="icon-check" />
+                  <span className="price-text">Best Price Guaranteed</span>
+                </div>
               </div>
             </div>
           </div>
