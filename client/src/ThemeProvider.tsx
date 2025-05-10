@@ -7,6 +7,7 @@ interface ThemeContextType {
   toggleTheme: () => void;
 }
 
+// Create context with default values
 export const ThemeContext = createContext<ThemeContextType>({
   theme: 'light',
   toggleTheme: () => {},
