@@ -1,8 +1,8 @@
 import { Check, Info } from "lucide-react";
-import kdhVan from "@/assets/imgs/kdh.png";
-import priusImg from "@/assets/imgs/prius.png";
-// Define vehicle images as base64 strings (we'll replace with actual images later)
-// For now we'll use placeholders
+
+// Use specific Toyota vehicle images that match the screenshot
+const kdhVan = "https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2019/09/2019_Toyota_HiAce_Commuter_003-scaled.jpg";
+const priusImg = "https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2019/03/2019_Toyota_Prius_13-scaled.jpg";
 
 interface VehicleItem {
   id: number;
@@ -53,14 +53,14 @@ const VehicleSection = () => {
               key={vehicle.id}
               className="bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="relative">
+              <div className="relative h-52 bg-gray-50 flex items-center justify-center overflow-hidden">
                 <img
                   src={vehicle.image}
                   alt={vehicle.name}
-                  className="w-full h-64 object-cover"
+                  className="h-full w-full object-cover"
                 />
                 <span
-                  className={`absolute top-4 right-4 py-1 px-3 rounded-full text-sm font-medium ${vehicle.isLuxury ? "bg-accent text-white" : "bg-primary text-white"}`}
+                  className={`absolute top-4 right-4 py-1 px-3 rounded-full text-sm font-medium ${vehicle.isLuxury ? "bg-orange-500 text-white" : "bg-primary text-white"}`}
                 >
                   {vehicle.type}
                 </span>

@@ -7,11 +7,11 @@ export default function CallToAction() {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
-          src={CTA_IMAGE}
-          alt="Sri Lankan tea plantations"
+          src="https://images.unsplash.com/photo-1567270646285-93f81f1f4dfc?q=80&w=1974&auto=format&fit=crop"
+          alt="Sri Lankan landscape"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-purple-900/80"></div>
       </div>
       
       <div className="container mx-auto relative z-10 text-center text-white">
@@ -24,14 +24,14 @@ export default function CallToAction() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/book-consultation"
-            className="bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-md transition"
+            href="/contact"
+            className="bg-white text-primary hover:bg-gray-100 font-medium px-8 py-4 rounded-md transition text-lg"
           >
             Book a Free Consultation
           </Link>
           <Link
             href="/contact"
-            className="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white font-medium px-6 py-3 rounded-md transition"
+            className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium px-8 py-4 rounded-md transition text-lg"
           >
             Contact Us
           </Link>
