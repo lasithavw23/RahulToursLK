@@ -26,15 +26,7 @@ export default function ExperienceShowcase() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <Link
-            href="/experiences"
-            className="inline-flex items-center px-6 py-3 bg-white text-neutral-900 font-medium rounded-md hover:bg-neutral-200 transition"
-          >
-            Discover All Experiences
-            <i className="fas fa-arrow-right ml-2"></i>
-          </Link>
-        </div>
+        {/* "Discover All Experiences" button removed as requested */}
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ export default function FeaturedTours() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Unforgettable Sri Lankan Experiences
+              Featured Tours
             </h2>
             <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
               Handcrafted tours designed to showcase the best of Sri Lanka's culture, nature, and history.
@@ -36,7 +36,7 @@ export default function FeaturedTours() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Unforgettable Sri Lankan Experiences
+              Featured Tours
             </h2>
             <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
               Handcrafted tours designed to showcase the best of Sri Lanka's culture, nature, and history.
@@ -55,7 +55,7 @@ export default function FeaturedTours() {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Unforgettable Sri Lankan Experiences
+            Featured Tours
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
             Handcrafted tours designed to showcase the best of Sri Lanka's culture, nature, and history.
