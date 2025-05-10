@@ -1,0 +1,83 @@
+Create a modern, SEO-optimized Sri Lanka tour website using Next.js (App Router), similar to dearsrilanka.com. The website should showcase tours, destinations, and allow users to book experiences.
+## Technical Requirements
+### Framework and Architecture
+- Use Next.js with the App Router for optimal SEO
+- Implement a combination of Server and Client Components where appropriate
+- Create API routes for booking functionality
+- Use TypeScript for type safety
+- Implement responsive design that works on mobile, tablet, and desktop
+### Database and Data Management
+- Use PostgreSQL with Drizzle ORM for database operations
+- Create models for: Tours, Destinations, Attractions, Bookings, Testimonials
+- Implement API routes for admin CRUD operations
+- Use server components for data fetching where possible
+### Performance Optimization
+- Implement Next.js Image component with .avif or .webp formats
+- Use proper image sizing and responsive images
+- Implement font optimization and preloading
+- Ensure Core Web Vitals are excellent (LCP, FID, CLS)
+- Implement proper caching strategies
+### UI/UX Design
+- Create a visually stunning hero section with image slider
+- Implement smooth animations and transitions using Framer Motion
+- Use a modern, clean design language with attention to typography
+- Ensure accessibility compliance (WCAG standards)
+- Implement dark/light mode toggle
+## Content Features
+### Home Page
+- Hero section with image carousel showcasing Sri Lanka's beauty
+- Featured tours section with card displays
+- Popular destinations section
+- Testimonials section with customer reviews
+- Call-to-action for booking consultation
+- Quick search functionality for tours
+### Tours Pages
+- Comprehensive listing page with filtering options
+- Detailed tour page for each tour including:
+  - Image gallery
+  - Detailed itinerary
+  - Pricing information
+  - Included/excluded items
+  - Map integration
+  - Related tours
+### Destinations Pages
+- Destination catalog page with filtering
+- Individual destination pages with:
+  - Description and history
+  - Things to do
+  - Best time to visit
+  - Related tours
+  - Photo gallery
+### Booking System
+- Multi-step booking form
+- Date selection with availability checking
+- Guest information collection
+- Special requests field
+- Email confirmation system using a service like Brevo
+- Booking management for administrators
+### Additional Pages
+- About Us page with company information
+- Contact page with form and map
+- Blog section for travel tips and destination guides
+- FAQ page with accordion sections
+- Privacy policy and terms of service pages
+## Administration
+- Secure admin section with Firebase Authentication
+- Dashboard with analytics overview
+- Content management for tours, destinations, and attractions
+- Booking management system
+- Image upload and management
+- Testimonial management
+## Technical Integrations
+- Email service integration for booking confirmations (Brevo)
+- Map integration for tour routes (Google Maps or Mapbox)
+- Image optimization and CDN setup
+- Analytics integration (Google Analytics or similar)
+- Social media sharing functionality
+## Deployment
+- Configure for deployment on Vercel
+- Set up environment variables for API keys and secrets
+- Implement proper SEO metadata and sitemap generation
+- Configure robots.txt
+- Set up proper redirects and rewrites
+Reuse any existing content, images, and data from the current application where possible. Ensure the design is visually appealing and effectively showcases the beauty of Sri Lanka tourism.
