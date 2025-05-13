@@ -287,6 +287,122 @@ export class MemStorage implements IStorage {
         dateModified: "2025-05-13",
         author: "Your Brand Name",
         category: "Cultural Tours"
+      },
+      {
+        title: "Colombo City Highlights Tour",
+        slug: "colombo-city-tour",
+        shortDescription: "Experience Colombo's rich heritage, vibrant culture, and modern marvels on a guided city tour featuring temples, colonial landmarks, shopping, and more.",
+        description: `
+    Discover the dynamic spirit of Sri Lanka's capital with our Colombo City Highlights Tour. This expertly guided day trip blends the city's ancient Buddhist traditions, colonial-era architecture, bustling markets, and contemporary attractions. Visit the iconic Gangaramaya Buddhist Temple, a masterpiece of multicultural design set beside tranquil Beira Lake, and admire the striking Red Mosque in the heart of Pettah.
+
+    Stroll through Independence Arcade and Square, a symbol of Sri Lanka's freedom and a hub for modern shopping and dining. Explore the historic Old Dutch Hospital, now a vibrant shopping and dining precinct, and ascend the Lotus Tower (optional), South Asia's tallest structure, for panoramic city views. Relax at Galle Face Green, Colombo's beloved oceanfront promenade, and browse luxury brands at One Galle Face Mall. Complete your journey at the Gem Museum in Kollupitiya.
+
+    This immersive tour is perfect for first-time visitors and seasoned travelers alike, offering a seamless blend of history, culture, and urban excitement. Enjoy comfortable transfers, insightful commentary, and unforgettable experiences in the heart of Colombo.
+  `,
+        imageUrl: "https://yourcdn.com/images/colombo-tour-cover.jpg",
+        rating: 4.7,
+        price: 95,
+        duration: 1,
+        isFeatured: true,
+        places: [
+          {
+            title: "Gangaramaya Buddhist Temple",
+            imagePreview: "https://yourcdn.com/images/gangaramaya-temple.jpg",
+            shortDescription: "Explore Colombo's most iconic Buddhist temple, renowned for its eclectic architecture and lakeside setting.",
+            description: "Gangaramaya Temple is a must-visit landmark in Colombo, celebrated for its blend of Sri Lankan, Thai, Indian, and Chinese architectural styles. Founded in the late 19th century beside Beira Lake, the temple houses an impressive array of Buddha statues, intricate carvings, and a museum filled with rare artifacts. The temple is a vibrant center for spirituality, culture, and learning, and hosts colorful festivals that attract visitors from around the world."
+          },
+          {
+            title: "Independence Arcade & Square",
+            imagePreview: "https://yourcdn.com/images/independence-arcade.jpg",
+            shortDescription: "Visit Colombo's grand Independence Square and its colonial-era shopping arcade.",
+            description: "Independence Square is a national monument commemorating Sri Lanka's independence from British rule. The adjacent Independence Arcade, housed in a beautifully restored colonial building, features boutique shops, cafes, and art galleries. The area is perfect for leisurely strolls, photos, and soaking in Colombo's blend of history and modern lifestyle."
+          },
+          {
+            title: "Old Dutch Hospital (Shopping & Dining)",
+            imagePreview: "https://yourcdn.com/images/old-dutch-hospital.jpg",
+            shortDescription: "Shop and dine in Colombo's oldest colonial building, now a trendy urban precinct.",
+            description: "The Old Dutch Hospital, dating back to the 17th century, is one of Colombo's oldest and best-preserved colonial structures. Today, it's a bustling hub filled with upscale boutiques, restaurants, and bars. Enjoy the unique blend of history and modernity as you explore this architectural gem in the heart of the city."
+          },
+          {
+            title: "Lotus Tower (Optional)",
+            imagePreview: "https://yourcdn.com/images/lotus-tower.jpg",
+            shortDescription: "Ascend South Asia's tallest tower for breathtaking 360-degree views of Colombo.",
+            description: "The Lotus Tower, a striking symbol of modern Colombo, stands at 350 meters and offers panoramic views of the city and coastline. The tower features observation decks, restaurants, and entertainment venues, making it a must-visit for those seeking a unique perspective on Sri Lanka's capital."
+          },
+          {
+            title: "Red Mosque (Jami Ul-Alfar Mosque)",
+            imagePreview: "https://yourcdn.com/images/red-mosque.jpg",
+            shortDescription: "Marvel at the iconic red-and-white striped mosque in bustling Pettah.",
+            description: "The Jami Ul-Alfar Mosque, popularly known as the Red Mosque, is one of Colombo's most photographed landmarks. Its unique candy-striped façade and Indo-Saracenic architecture make it a standout attraction. Located in the heart of the Pettah market district, the mosque is a vibrant symbol of Colombo's multicultural heritage."
+          },
+          {
+            title: "Galle Face Green",
+            imagePreview: "https://yourcdn.com/images/galle-face.jpg",
+            shortDescription: "Relax at Colombo's famous oceanfront promenade and mingle with locals.",
+            description: "Galle Face Green is a sprawling seaside park popular for evening strolls, kite flying, and sampling local street food. Overlooking the Indian Ocean, it's the perfect spot to unwind, watch the sunset, and experience the lively atmosphere of Colombo's waterfront."
+          },
+          {
+            title: "One Galle Face Shopping Mall",
+            imagePreview: "https://yourcdn.com/images/one-galle-face.jpg",
+            shortDescription: "Indulge in luxury shopping and dining at Colombo's premier lifestyle mall.",
+            description: "One Galle Face Mall is Colombo's largest and most modern shopping destination, featuring international brands, gourmet restaurants, and entertainment options. Its prime location near Galle Face Green makes it a favorite for both locals and visitors seeking a world-class retail experience."
+          },
+          {
+            title: "Gem Museum - Kollupitiya",
+            imagePreview: "https://yourcdn.com/images/gem-museum.jpg",
+            shortDescription: "Discover Sri Lanka's legendary gems and jewelry heritage.",
+            description: "The Gem Museum in Kollupitiya showcases Sri Lanka's rich legacy as the 'Island of Gems.' Explore dazzling displays of sapphires, rubies, and other precious stones, and learn about the country's centuries-old gem mining and craftsmanship traditions. The museum is an essential stop for gem enthusiasts and those seeking unique souvenirs."
+          }
+        ],
+        mapLink: "https://www.google.com/maps/d/embed?mid=1kUeMB-colombo-tour-map&hl=en",
+        gallery: [
+          "https://yourcdn.com/images/colombo-gangaramaya.jpg",
+          "https://yourcdn.com/images/colombo-independence.jpg",
+          "https://yourcdn.com/images/colombo-dutch-hospital.jpg",
+          "https://yourcdn.com/images/colombo-lotus-tower.jpg",
+          "https://yourcdn.com/images/colombo-red-mosque.jpg",
+          "https://yourcdn.com/images/colombo-galle-face.jpg"
+        ],
+        metaTitle: "Colombo City Highlights Tour | Gangaramaya Temple, Red Mosque, Lotus Tower & More",
+        metaDescription: "Book the Colombo City Highlights Tour to explore Gangaramaya Temple, Independence Square, Red Mosque, Galle Face, top shopping malls, and the Gem Museum. Discover the best of Colombo in one unforgettable day.",
+        keywords: [
+          "Colombo city tour",
+          "Gangaramaya Temple Colombo",
+          "Colombo sightseeing",
+          "Colombo shopping tour",
+          "Red Mosque Colombo",
+          "Lotus Tower Colombo",
+          "Galle Face Green",
+          "Colombo attractions"
+        ],
+        canonicalUrl: "https://yourdomain.com/tours/colombo-city-tour",
+        structuredData: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          "name": "Colombo City Highlights Tour",
+          "description": "Experience Colombo's top attractions, from the Gangaramaya Buddhist Temple and Red Mosque to Independence Square, Lotus Tower, Galle Face Green, and luxury shopping malls, on a guided city tour.",
+          "image": [
+            "https://yourcdn.com/images/colombo-gangaramaya.jpg",
+            "https://yourcdn.com/images/colombo-independence.jpg",
+            "https://yourcdn.com/images/colombo-dutch-hospital.jpg"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "95",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "touristType": "Cultural",
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Your Brand Name",
+            "url": "https://yourdomain.com"
+          }
+        }),
+        dateCreated: "2025-05-13",
+        dateModified: "2025-05-13",
+        author: "Your Brand Name",
+        category: "City Tours"
       }
     ];
 
