@@ -6,12 +6,12 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Us - Dear Sri Lanka</title>
+        <title>About Us - Rahul Tours Sri Lanka</title>
         <meta 
           name="description" 
-          content="Learn about Dear Sri Lanka - your trusted partner for authentic Sri Lankan travel experiences. Meet our team and discover our story."
+          content="Learn about Rahul Tours Sri Lanka - your trusted partner for authentic Sri Lankan travel experiences. Meet our team and discover our story."
         />
-        <link rel="canonical" href="https://dearsrilanka.com/about" />
+        <link rel="canonical" href="https://rahultoursrilanka.com/about" />
       </Helmet>
 
       {/* Hero Section */}
@@ -40,7 +40,7 @@ export default function About() {
             <h2 className="text-3xl font-display font-bold mb-6 text-center">Our Story</h2>
             <div className="prose prose-lg dark:prose-invert max-w-none">
               <p>
-                Founded in 2015, Dear Sri Lanka was born from a passion to share the authentic beauty 
+                Founded in 2015, Rahul Tours Sri Lanka was born from a passion to share the authentic beauty 
                 and culture of Sri Lanka with travelers from around the world. What began as a small 
                 team of local guides with intimate knowledge of the island has grown into a leading 
                 tour operator specializing in personalized Sri Lankan experiences.
