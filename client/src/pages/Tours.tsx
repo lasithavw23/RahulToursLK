@@ -25,16 +25,16 @@ export default function Tours() {
   const [location] = useLocation();
   const { toast } = useToast();
   const [filters, setFilters] = useState({
-    destination: "",
-    duration: "",
-    priceRange: "",
+    destination: "all",
+    duration: "any",
+    priceRange: "any",
   });
 
   // Parse URL search parameters
   useEffect(() => {
     const params = new URLSearchParams(location.split("?")[1]);
-    const destination = params.get("destination") || "";
-    const duration = params.get("duration") || "";
+    const destination = params.get("destination") || "all";
+    const duration = params.get("duration") || "any";
     
     setFilters(prev => ({
       ...prev,
@@ -56,9 +56,9 @@ export default function Tours() {
   // Clear all filters
   const clearFilters = () => {
     setFilters({
-      destination: "",
-      duration: "",
-      priceRange: "",
+      destination: "all",
+      duration: "any",
+      priceRange: "any",
     });
   };
 
@@ -113,7 +113,7 @@ export default function Tours() {
                       <SelectValue placeholder="All Destinations" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All Destinations</SelectItem>
+                      <SelectItem value="all">All Destinations</SelectItem>
                       {DESTINATIONS.map((dest) => (
                         <SelectItem key={dest.value} value={dest.value}>
                           {dest.label}
@@ -133,7 +133,7 @@ export default function Tours() {
                       <SelectValue placeholder="Any Duration" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">Any Duration</SelectItem>
+                      <SelectItem value="any">Any Duration</SelectItem>
                       {DURATIONS.map((dur) => (
                         <SelectItem key={dur.value} value={dur.value}>
                           {dur.label}
@@ -153,7 +153,7 @@ export default function Tours() {
                       <SelectValue placeholder="Any Price" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">Any Price</SelectItem>
+                      <SelectItem value="any">Any Price</SelectItem>
                       <SelectItem value="under-500">Under $500</SelectItem>
                       <SelectItem value="500-1000">$500 - $1000</SelectItem>
                       <SelectItem value="1000-1500">$1000 - $1500</SelectItem>
