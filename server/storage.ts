@@ -122,7 +122,7 @@ export class MemStorage implements IStorage {
         description: `Embark on the ultimate cultural adventure with our Sigiriya & Dambulla UNESCO Heritage Day Tour. Ascend the legendary Sigiriya Rock Fortress-often called the 'Eighth Wonder of the World'-and marvel at its ancient frescoes, water gardens, and breathtaking panoramic views. Explore the Dambulla Golden Cave Temple, Sri Lanka's largest and best-preserved cave temple complex, adorned with over 150 Buddha statues and vibrant murals dating back more than 2,000 years.
     
     This expertly guided tour includes comfortable transfers, skip-the-line entry, and in-depth commentary on the rich history and significance of these iconic landmarks. Ideal for history enthusiasts, culture seekers, and adventure travelers, this day trip offers an immersive journey into Sri Lanka's royal past and spiritual heritage. Discover why Sigiriya and Dambulla are top-rated attractions and a must for every Sri Lanka itinerary.`,
-        imageUrl: "https://pixabay.com/get/g2a5074338a2b6823a7d567b75986089770057a9900a1e3ef063d9be676ff3b5d0ef8406e9309796f7e5149aba4b088877e024536e4cc407874f70a16d52a9767_1280.jpg",
+        imageUrl: "/src/assets/imgs/Sigri_dambulla_tour_Sri_Lanka.webp",
         rating: 4.8,
         price: 120,
         duration: 1,

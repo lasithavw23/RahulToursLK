@@ -9,7 +9,7 @@ export const sigiriyaDambullaTour = {
     
     This expertly guided tour includes comfortable transfers, skip-the-line entry, and in-depth commentary on the rich history and significance of these iconic landmarks. Ideal for history enthusiasts, culture seekers, and adventure travelers, this day trip offers an immersive journey into Sri Lanka's royal past and spiritual heritage. Discover why Sigiriya and Dambulla are top-rated attractions and a must for every Sri Lanka itinerary.
   `,
-  imageUrl: "https://pixabay.com/get/g2a5074338a2b6823a7d567b75986089770057a9900a1e3ef063d9be676ff3b5d0ef8406e9309796f7e5149aba4b088877e024536e4cc407874f70a16d52a9767_1280.jpg",
+  imageUrl: "/src/assets/imgs/Sigri_dambulla_tour_Sri_Lanka.webp",
   rating: 4.8,
   price: 120,
   duration: 1,
