@@ -13,6 +13,8 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
+import Attractions from "@/pages/Attractions";
+import AttractionDetail from "@/pages/AttractionDetail";
 
 function Router() {
   return (
@@ -22,6 +24,8 @@ function Router() {
       <Route path="/tours/:slug" component={TourDetail} />
       <Route path="/destinations" component={Destinations} />
       <Route path="/destinations/:slug" component={DestinationDetail} />
+      <Route path="/attractions" component={Attractions} />
+      <Route path="/attractions/:slug" component={AttractionDetail} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/blog" component={Blog} />

@@ -13,6 +13,7 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/tours", label: "Tours" },
   { href: "/destinations", label: "Destinations" },
+  { href: "/attractions", label: "Attractions" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
