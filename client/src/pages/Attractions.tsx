@@ -43,7 +43,23 @@ export default function Attractions() {
   // Generate placeholder things to do for places that don't have them
   const generateThingsToDo = (place: Place): Place => {
     if (!place.thingsToDo || place.thingsToDo.length === 0) {
-      // Create some generic activities based on the place name and description
+      // For Sigiriya, use specific things to do
+      if (place.title.toLowerCase().includes('sigiriya')) {
+        const activities = [
+          'Climb to the Top of Sigiriya Rock',
+          'Explore the Sigiriya Frescoes',
+          'Walk Through the Water Gardens',
+          'See the Lion\'s Paw Entrance',
+          'Visit the Mirror Wall',
+          'Explore the Royal Gardens and Pools'
+        ];
+        return {
+          ...place,
+          thingsToDo: activities
+        };
+      }
+      
+      // For other places, create generic activities
       const activities = [
         `Explore the ${place.title} area`,
         `Take memorable photos at ${place.title}`,

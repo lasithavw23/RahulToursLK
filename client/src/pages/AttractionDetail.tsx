@@ -36,7 +36,23 @@ export default function AttractionDetail() {
 
   const generateThingsToDo = (place: Place): Place => {
     if (!place.thingsToDo || place.thingsToDo.length === 0) {
-      // Create some generic activities based on the place name and description
+      // For Sigiriya, use specific things to do
+      if (place.title.toLowerCase().includes('sigiriya')) {
+        const activities = [
+          'Climb to the Top of Sigiriya Rock',
+          'Explore the Sigiriya Frescoes',
+          'Walk Through the Water Gardens',
+          'See the Lion\'s Paw Entrance',
+          'Visit the Mirror Wall',
+          'Explore the Royal Gardens and Pools'
+        ];
+        return {
+          ...place,
+          thingsToDo: activities
+        };
+      }
+      
+      // For other places, create generic activities
       const activities = [
         `Explore the ${place.title} area`,
         `Take memorable photos at ${place.title}`,
@@ -153,25 +169,53 @@ export default function AttractionDetail() {
                   <h2 className="text-2xl font-bold mb-6">Things to Do at {attraction.title}</h2>
                   
                   {attraction.thingsToDo && attraction.thingsToDo.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {attraction.thingsToDo.map((activity, index) => (
-                        <div 
-                          key={index} 
-                          className="bg-white dark:bg-neutral-800 p-5 rounded-lg shadow-sm border border-neutral-100 dark:border-neutral-700"
-                        >
-                          <div className="flex items-start">
-                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                              <span className="text-lg font-bold">{index + 1}</span>
-                            </div>
-                            <div className="ml-4">
-                              <h3 className="text-lg font-semibold mb-2">{activity}</h3>
-                              <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-                                Experience the unique charm and authenticity of Sri Lanka through this activity.
-                              </p>
+                    <div className="grid grid-cols-1 gap-6">
+                      {attraction.thingsToDo.map((activity, index) => {
+                        // Additional descriptions for Sigiriya activities
+                        let description = "Experience the unique charm and authenticity of Sri Lanka through this activity.";
+                        
+                        if (attraction.title.toLowerCase().includes('sigiriya')) {
+                          switch(index) {
+                            case 0: // Climb to the Top
+                              description = "The main highlight of Sigiriya is climbing the massive 200-meter rock, which was once the site of a royal palace. The climb involves a series of staircases, including a narrow spiral staircase inside the Lion's Paw, offering a spectacular view of the surrounding landscape.";
+                              break;
+                            case 1: // Frescoes
+                              description = "Halfway up the rock, you'll find the famous Sigiriya frescoes. These ancient murals, believed to date back to the 5th century, depict beautiful women and are a major attraction. The frescoes are beautifully preserved in a sheltered area on the rock face.";
+                              break;
+                            case 2: // Water Gardens
+                              description = "At the base of the rock, you can explore the ancient water gardens. These gardens include symmetrical ponds and fountains, designed to reflect the grandeur of the royal palace. The layout of the gardens is an exceptional example of ancient Sri Lankan landscaping.";
+                              break;
+                            case 3: // Lion's Paw
+                              description = "The Lion's Paw is a massive sculpture at the foot of the rock, which originally formed part of the entrance to the royal palace. The entrance is shaped like a lion's mouth, and the paws that remain are a fascinating feature, giving the fortress its name.";
+                              break;
+                            case 4: // Mirror Wall
+                              description = "On your way up the rock, you'll encounter the Mirror Wall, a highly polished surface originally designed to reflect the surroundings. Today, you can see old inscriptions on the wall, which were made by visitors who came to Sigiriya over the centuries.";
+                              break;
+                            case 5: // Royal Gardens
+                              description = "In addition to the water gardens, Sigiriya also features royal bathing pools and sophisticated irrigation systems. These pools, set amidst well-maintained gardens, offer a glimpse into the luxurious lifestyle of the ancient kings.";
+                              break;
+                          }
+                        }
+                        
+                        return (
+                          <div 
+                            key={index} 
+                            className="bg-white dark:bg-neutral-800 p-6 rounded-lg shadow-sm border border-neutral-100 dark:border-neutral-700"
+                          >
+                            <div className="flex items-start">
+                              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                <span className="text-lg font-bold">{index + 1}</span>
+                              </div>
+                              <div className="ml-4 flex-1">
+                                <h3 className="text-xl font-semibold mb-3">{activity}</h3>
+                                <p className="text-neutral-600 dark:text-neutral-400">
+                                  {description}
+                                </p>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   ) : (
                     <p className="text-neutral-600 dark:text-neutral-400">
