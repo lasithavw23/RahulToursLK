@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { NAV_LINKS } from "@/lib/constants";
-import { useTheme } from "@/hooks/use-theme";
 import BookingModal from "@/components/booking/BookingModal";
 
 // Import the logo
@@ -11,7 +10,28 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBookingModal, setShowBookingModal] = useState(false);
   const [location] = useLocation();
-  const { theme, toggleTheme } = useTheme();
+  const [isDark, setIsDark] = useState(false);
+  
+  // Skip the context-based theme for now and implement a direct approach
+  const toggleTheme = () => {
+    const newTheme = !isDark ? 'dark' : 'light';
+    setIsDark(!isDark);
+    
+    // Apply theme to document
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
+  // Check initial theme on component mount
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    const isDarkMode = storedTheme === 'dark';
+    setIsDark(isDarkMode);
+    
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(isDarkMode ? 'dark' : 'light');
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -57,7 +77,7 @@ export default function Navbar() {
             className="text-neutral-600 dark:text-neutral-300 hover:text-primary dark:hover:text-primary-light p-2 rounded-full"
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? (
+            {isDark ? (
               <i className="fa-solid fa-sun text-lg"></i>
             ) : (
               <i className="fa-solid fa-moon text-lg"></i>
