@@ -78,7 +78,7 @@ export default function Tours() {
           name="description" 
           content="Discover our handcrafted Sri Lanka tours and travel experiences. From beaches to wildlife safaris, cultural heritage to tea plantations."
         />
-        <link rel="canonical" href="https://dearsrilanka.com/tours" />
+        <link rel="canonical" href="https://rahultoursrilanka.com/tours" />
       </Helmet>
 
       {/* Hero Section */}

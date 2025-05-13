@@ -17,7 +17,7 @@ export default function Destinations() {
           name="description" 
           content="Explore the diverse destinations of Sri Lanka - from ancient cities and cultural sites to pristine beaches and wildlife parks."
         />
-        <link rel="canonical" href="https://dearsrilanka.com/destinations" />
+        <link rel="canonical" href="https://rahultoursrilanka.com/destinations" />
       </Helmet>
 
       {/* Hero Section */}

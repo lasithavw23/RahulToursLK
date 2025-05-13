@@ -53,7 +53,7 @@ export default function DestinationDetail() {
       <Helmet>
         <title>{`${destination.name} - Destinations | Dear Sri Lanka`}</title>
         <meta name="description" content={destination.shortDescription} />
-        <link rel="canonical" href={`https://dearsrilanka.com/destinations/${destination.slug}`} />
+        <link rel="canonical" href={`https://rahultoursrilanka.com/destinations/${destination.slug}`} />
       </Helmet>
 
       {/* Hero Banner */}

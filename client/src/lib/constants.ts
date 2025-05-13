@@ -91,7 +91,7 @@ export const POPULAR_TOURS = [
 export const CONTACT_INFO = [
   { icon: "fa-map-marker-alt", info: "123 Temple Road, Colombo 04, Sri Lanka" },
   { icon: "fa-phone", info: "+94 11 234 5678" },
-  { icon: "fa-envelope", info: "info@dearsrilanka.com" },
+  { icon: "fa-envelope", info: "info@rahultoursrilanka.com" },
   { icon: "fa-clock", info: "Mon-Fri: 9:00 AM - 6:00 PM" },
 ];
 
