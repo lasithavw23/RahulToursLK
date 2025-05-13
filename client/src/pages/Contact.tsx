@@ -4,12 +4,7 @@ import { Helmet } from "react-helmet";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { CONTACT_INFO } from "@/lib/constants";
-import { 
-  Card, 
-  CardContent, 
-  CardHeader, 
-  CardTitle 
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -38,7 +33,8 @@ export default function Contact() {
     onSuccess: () => {
       toast({
         title: "Message Sent",
-        description: "Thank you for your message. We'll get back to you shortly.",
+        description:
+          "Thank you for your message. We'll get back to you shortly.",
         variant: "default",
       });
       setFormData({
@@ -58,7 +54,7 @@ export default function Contact() {
   });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -72,9 +68,9 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Dear Sri Lanka</title>
-        <meta 
-          name="description" 
+        <title>Contact Us - Rahul Tours Sri Lanka</title>
+        <meta
+          name="description"
           content="Have questions about your Sri Lanka trip? Contact our travel experts for personalized assistance with planning your perfect vacation."
         />
         <link rel="canonical" href="https://rahultoursrilanka.com/contact" />
@@ -93,7 +89,8 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-xl max-w-2xl mx-auto">
-              Have questions? We're here to help plan your perfect Sri Lankan adventure.
+              Have questions? We're here to help plan your perfect Sri Lankan
+              adventure.
             </p>
           </div>
         </div>
@@ -107,7 +104,9 @@ export default function Contact() {
             <div>
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl font-display">Send Us a Message</CardTitle>
+                  <CardTitle className="text-2xl font-display">
+                    Send Us a Message
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -134,7 +133,7 @@ export default function Contact() {
                         />
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="subject">Subject</Label>
                       <Input
@@ -145,7 +144,7 @@ export default function Contact() {
                         required
                       />
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
                       <Textarea
@@ -157,9 +156,9 @@ export default function Contact() {
                         required
                       />
                     </div>
-                    
-                    <Button 
-                      type="submit" 
+
+                    <Button
+                      type="submit"
                       className="w-full bg-primary hover:bg-primary-dark text-white"
                       disabled={mutation.isPending}
                     >
@@ -169,16 +168,19 @@ export default function Contact() {
                 </CardContent>
               </Card>
             </div>
-            
+
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-display font-bold mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-display font-bold mb-6">
+                  Contact Information
+                </h2>
                 <p className="text-neutral-600 dark:text-neutral-400 mb-8">
-                  Have questions about our tours or need help planning your trip? Our team 
-                  of Sri Lanka travel experts is ready to assist you.
+                  Have questions about our tours or need help planning your
+                  trip? Our team of Sri Lanka travel experts is ready to assist
+                  you.
                 </p>
-                
+
                 <div className="space-y-6">
                   {CONTACT_INFO.map((item, index) => (
                     <div key={index} className="flex items-start">
@@ -192,39 +194,43 @@ export default function Contact() {
                           {item.icon === "fa-envelope" && "Email"}
                           {item.icon === "fa-clock" && "Office Hours"}
                         </span>
-                        <span className="text-neutral-600 dark:text-neutral-400">{item.info}</span>
+                        <span className="text-neutral-600 dark:text-neutral-400">
+                          {item.info}
+                        </span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-              
+
               <div>
-                <h2 className="text-2xl font-display font-bold mb-6">Follow Us</h2>
+                <h2 className="text-2xl font-display font-bold mb-6">
+                  Follow Us
+                </h2>
                 <div className="flex space-x-4">
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="bg-[#3b5998] text-white w-12 h-12 rounded-full flex items-center justify-center hover:opacity-90 transition"
                     aria-label="Facebook"
                   >
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="bg-[#E4405F] text-white w-12 h-12 rounded-full flex items-center justify-center hover:opacity-90 transition"
                     aria-label="Instagram"
                   >
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="bg-[#1DA1F2] text-white w-12 h-12 rounded-full flex items-center justify-center hover:opacity-90 transition"
                     aria-label="Twitter"
                   >
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="bg-[#FF0000] text-white w-12 h-12 rounded-full flex items-center justify-center hover:opacity-90 transition"
                     aria-label="YouTube"
                   >
@@ -249,7 +255,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Dear Sri Lanka Office Location"
+              title="Rahul Tours Sri Lanka Office Location"
             ></iframe>
           </div>
         </div>

@@ -5,18 +5,13 @@ import { Helmet } from "react-helmet";
 import { Tour } from "@/lib/types";
 import BookingModal from "@/components/booking/BookingModal";
 import { Button } from "@/components/ui/button";
-import { 
-  Tabs, 
-  TabsContent, 
-  TabsList, 
-  TabsTrigger 
-} from "@/components/ui/tabs";
-import { 
-  Card, 
-  CardContent, 
-  CardDescription, 
-  CardHeader, 
-  CardTitle 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
@@ -27,7 +22,11 @@ export default function TourDetail() {
 
   const slug = params?.slug || "";
 
-  const { data: tour, isLoading, error } = useQuery<Tour>({
+  const {
+    data: tour,
+    isLoading,
+    error,
+  } = useQuery<Tour>({
     queryKey: [`/api/tours/${slug}`],
     enabled: Boolean(slug),
   });
@@ -61,11 +60,22 @@ export default function TourDetail() {
   return (
     <>
       <Helmet>
-        <title>{tour.metaTitle || `${tour.title} - Dear Sri Lanka`}</title>
-        <meta name="description" content={tour.metaDescription || tour.shortDescription} />
-        <link rel="canonical" href={tour.canonicalUrl || `https://dearsrilanka.com/tours/${tour.slug}`} />
+        <title>
+          {tour.metaTitle || `${tour.title} - Rahul Tours Sri Lanka`}
+        </title>
+        <meta
+          name="description"
+          content={tour.metaDescription || tour.shortDescription}
+        />
+        <link
+          rel="canonical"
+          href={
+            tour.canonicalUrl ||
+            `https://rahultoursrilanka.com/tours/${tour.slug}`
+          }
+        />
         {tour.keywords && tour.keywords.length > 0 && (
-          <meta name="keywords" content={tour.keywords.join(', ')} />
+          <meta name="keywords" content={tour.keywords.join(", ")} />
         )}
         {tour.dateModified && (
           <meta property="article:modified_time" content={tour.dateModified} />
@@ -74,9 +84,7 @@ export default function TourDetail() {
           <meta property="article:published_time" content={tour.dateCreated} />
         )}
         {tour.structuredData && (
-          <script type="application/ld+json">
-            {tour.structuredData}
-          </script>
+          <script type="application/ld+json">{tour.structuredData}</script>
         )}
       </Helmet>
 
@@ -115,7 +123,9 @@ export default function TourDetail() {
         {/* Tour Title and Quick Info */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-2">
-            <h1 className="text-3xl md:text-4xl font-display font-bold mb-4">{tour.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-display font-bold mb-4">
+              {tour.title}
+            </h1>
             <div className="flex items-center mb-6">
               <div className="flex items-center text-accent mr-6">
                 <i className="fas fa-star mr-1"></i>
@@ -145,7 +155,9 @@ export default function TourDetail() {
           <div className="lg:col-span-1">
             <Card className="shadow-lg">
               <CardHeader className="bg-primary text-white rounded-t-lg">
-                <CardTitle className="text-2xl font-display">Book This Tour</CardTitle>
+                <CardTitle className="text-2xl font-display">
+                  Book This Tour
+                </CardTitle>
                 <CardDescription className="text-white text-opacity-90">
                   Secure your spot today
                 </CardDescription>
@@ -154,7 +166,9 @@ export default function TourDetail() {
                 <div className="mb-6">
                   <div className="flex justify-between mb-2">
                     <span className="font-medium">Price:</span>
-                    <span className="text-2xl font-bold text-primary">${tour.price}</span>
+                    <span className="text-2xl font-bold text-primary">
+                      ${tour.price}
+                    </span>
                   </div>
                   <div className="text-sm text-neutral-500 dark:text-neutral-400 text-right">
                     per person
@@ -179,7 +193,9 @@ export default function TourDetail() {
                   </div>
                   <div className="flex items-start">
                     <i className="fas fa-check-circle text-primary mt-1 mr-3"></i>
-                    <span>Free cancellation up to 30 days before departure</span>
+                    <span>
+                      Free cancellation up to 30 days before departure
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -190,23 +206,32 @@ export default function TourDetail() {
         {/* Tour Details Tabs */}
         <Tabs defaultValue="places" className="mb-12">
           <TabsList className="w-full border-b justify-start mb-8">
-            <TabsTrigger value="places" className="text-lg">Places to Visit</TabsTrigger>
-            <TabsTrigger value="map" className="text-lg">Map</TabsTrigger>
+            <TabsTrigger value="places" className="text-lg">
+              Places to Visit
+            </TabsTrigger>
+            <TabsTrigger value="map" className="text-lg">
+              Map
+            </TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="places" className="mt-0">
             <div className="space-y-12">
               {tour.places.map((place, index) => (
-                <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8">
+                <div
+                  key={index}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8"
+                >
                   <div className="h-80 overflow-hidden rounded-lg">
-                    <img 
-                      src={place.imagePreview} 
+                    <img
+                      src={place.imagePreview}
                       alt={place.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-display font-bold mb-3">{place.title}</h3>
+                    <h3 className="text-2xl font-display font-bold mb-3">
+                      {place.title}
+                    </h3>
                     <p className="text-neutral-600 dark:text-neutral-400 font-medium mb-4">
                       {place.shortDescription}
                     </p>
@@ -218,7 +243,7 @@ export default function TourDetail() {
               ))}
             </div>
           </TabsContent>
-          
+
           <TabsContent value="map" className="mt-0">
             {tour.mapLink ? (
               <div className="h-[600px] rounded-lg overflow-hidden">
@@ -244,7 +269,9 @@ export default function TourDetail() {
         {/* Related Tours */}
         <div className="mt-16">
           <Separator className="mb-8" />
-          <h2 className="text-2xl font-display font-bold mb-6">You Might Also Like</h2>
+          <h2 className="text-2xl font-display font-bold mb-6">
+            You Might Also Like
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* This would be filled with related tours from the API */}
             <div className="text-center py-8">
@@ -256,9 +283,9 @@ export default function TourDetail() {
 
       {/* Booking Modal */}
       {showBookingModal && (
-        <BookingModal 
-          onClose={() => setShowBookingModal(false)} 
-          preselectedTourType={tour.slug.split('-')[0]} 
+        <BookingModal
+          onClose={() => setShowBookingModal(false)}
+          preselectedTourType={tour.slug.split("-")[0]}
         />
       )}
     </>

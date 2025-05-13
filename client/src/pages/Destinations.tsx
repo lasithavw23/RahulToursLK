@@ -5,19 +5,26 @@ import DestinationCard from "@/components/common/DestinationCard";
 import { Button } from "@/components/ui/button";
 
 export default function Destinations() {
-  const { data: destinations, isLoading, error } = useQuery<Destination[]>({
-    queryKey: ['/api/destinations'],
+  const {
+    data: destinations,
+    isLoading,
+    error,
+  } = useQuery<Destination[]>({
+    queryKey: ["/api/destinations"],
   });
 
   return (
     <>
       <Helmet>
-        <title>Destinations in Sri Lanka - Dear Sri Lanka</title>
-        <meta 
-          name="description" 
+        <title>Destinations in Sri Lanka - Rahul Tours Sri Lanka</title>
+        <meta
+          name="description"
           content="Explore the diverse destinations of Sri Lanka - from ancient cities and cultural sites to pristine beaches and wildlife parks."
         />
-        <link rel="canonical" href="https://rahultoursrilanka.com/destinations" />
+        <link
+          rel="canonical"
+          href="https://rahultoursrilanka.com/destinations"
+        />
       </Helmet>
 
       {/* Hero Section */}
@@ -34,8 +41,8 @@ export default function Destinations() {
                 Discover Sri Lanka's Destinations
               </h1>
               <p className="text-xl max-w-2xl mx-auto">
-                From ancient ruins to pristine beaches, explore the diverse landscapes 
-                and experiences that await you in Sri Lanka.
+                From ancient ruins to pristine beaches, explore the diverse
+                landscapes and experiences that await you in Sri Lanka.
               </p>
             </div>
           </div>
@@ -49,16 +56,19 @@ export default function Destinations() {
             Where Would You Like to Explore?
           </h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-            Each destination in Sri Lanka offers unique experiences and attractions. 
-            Choose from cultural hotspots, wildlife sanctuaries, beach paradises, 
-            and mountain retreats.
+            Each destination in Sri Lanka offers unique experiences and
+            attractions. Choose from cultural hotspots, wildlife sanctuaries,
+            beach paradises, and mountain retreats.
           </p>
         </div>
 
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[...Array(9)].map((_, i) => (
-              <div key={i} className="h-72 bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-xl"></div>
+              <div
+                key={i}
+                className="h-72 bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-xl"
+              ></div>
             ))}
           </div>
         ) : error || !destinations ? (
@@ -66,7 +76,7 @@ export default function Destinations() {
             <p className="text-red-500 mb-4">
               Error loading destinations. Please try again later.
             </p>
-            <Button 
+            <Button
               onClick={() => window.location.reload()}
               className="bg-primary hover:bg-primary-dark"
             >
@@ -75,7 +85,7 @@ export default function Destinations() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {destinations.map(destination => (
+            {destinations.map((destination) => (
               <DestinationCard key={destination.id} destination={destination} />
             ))}
           </div>
@@ -90,11 +100,11 @@ export default function Destinations() {
               Sri Lanka at a Glance
             </h2>
             <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-              Explore our interactive map to discover the geographic diversity of Sri Lanka 
-              and plan your perfect itinerary.
+              Explore our interactive map to discover the geographic diversity
+              of Sri Lanka and plan your perfect itinerary.
             </p>
           </div>
-          
+
           <div className="bg-white dark:bg-neutral-700 rounded-xl shadow-lg p-4 h-[600px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4047271.2199384123!2d78.4135179243458!3d7.851732110528847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0xe13da4b400e2d38c!2sSri%20Lanka!5e0!3m2!1sen!2sus!4v1652345678901!5m2!1sen!2sus"
