@@ -573,6 +573,77 @@ export class MemStorage implements IStorage {
         dateModified: "2025-05-13",
         author: "Your Brand Name",
         category: "Wildlife & Safari Tours"
+      },
+      {
+        title: "Udawalawe National Park Safari Tour",
+        slug: "udawalawe-safari-tour",
+        shortDescription: "Experience Sri Lanka's premier elephant safari in Udawalawe National Park with a private jeep, complimentary water, and expert guides.",
+        description: `
+    Embark on an unforgettable wildlife adventure with our Udawalawe National Park Safari Tour. Renowned for its thriving elephant population, Udawalawe is one of the best places in Asia to witness wild elephants roaming freely in their natural habitat. Board a comfortable, modern jeep and journey through diverse landscapes-from open grasslands and wetlands to dense forests-guided by experienced naturalists who share fascinating insights about the park's unique ecosystem.
+
+    Udawalawe National Park is a haven for wildlife enthusiasts, home to over 400 elephants, as well as water buffalo, sambar deer, wild boar, crocodiles, and the elusive Sri Lankan leopard. Birdwatchers will delight in spotting over 180 species of birds, including the Sri Lanka junglefowl, painted storks, and raptors. The park's rich biodiversity also includes reptiles like mugger crocodiles and Bengal monitors, making every safari a new adventure.
+
+    Choose from morning, afternoon, or full-day safari options to maximize your wildlife sightings during peak activity hours. Enjoy the convenience of complimentary mineral water and seamless pickup and drop-off services within 5 km of the park gate. Our tours are designed for comfort and safety, ensuring a memorable and immersive safari experience for families, photographers, and nature lovers alike.
+  `,
+        imageUrl: "https://yourcdn.com/images/udawalawe-safari-cover.jpg",
+        rating: 4.8,
+        price: 120,
+        duration: 1,
+        isFeatured: true,
+        places: [
+          {
+            title: "Udawalawe National Park",
+            imagePreview: "https://yourcdn.com/images/udawalawe-national-park.jpg",
+            shortDescription: "Sri Lanka's top destination for wild elephant encounters and diverse wildlife.",
+            description: "Udawalawe National Park is celebrated for its large herds of wild elephants, often seen near the Udawalawe Reservoir. The park's varied habitats support over 43 species of mammals, including water buffalo, deer, jackals, and the rare Sri Lankan leopard. Birdlife is abundant, with over 180 recorded species, making it a paradise for birdwatchers. The park's scenic landscapes and rich biodiversity offer an authentic safari experience for all visitors."
+          }
+        ],
+        mapLink: "https://www.google.com/maps/d/embed?mid=1kUeMB-udawalawe-tour-map&hl=en",
+        gallery: [
+          "https://yourcdn.com/images/udawalawe-elephants.jpg",
+          "https://yourcdn.com/images/udawalawe-buffalo.jpg",
+          "https://yourcdn.com/images/udawalawe-birds.jpg",
+          "https://yourcdn.com/images/udawalawe-jeep-safari.jpg"
+        ],
+        metaTitle: "Udawalawe Safari Tour | Private Jeep Safari in Udawalawe National Park Sri Lanka",
+        metaDescription: "Book your Udawalawe Safari Tour for an authentic wildlife adventure in Sri Lanka's Udawalawe National Park. Spot wild elephants, buffalo, deer, and exotic birds with a private jeep and expert guides.",
+        keywords: [
+          "Udawalawe Safari Tour",
+          "Udawalawe National Park safari",
+          "Sri Lanka elephant safari",
+          "Jeep safari Udawalawe",
+          "Wildlife safari Sri Lanka",
+          "Udawalawe birdwatching",
+          "Udawalawe jeep tour"
+        ],
+        canonicalUrl: "https://yourdomain.com/tours/udawalawe-safari-tour",
+        structuredData: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          "name": "Udawalawe National Park Safari Tour",
+          "description": "Experience a private jeep safari in Sri Lanka's Udawalawe National Park. Spot wild elephants, buffalo, deer, crocodiles, and exotic birds with expert guides and complimentary water.",
+          "image": [
+            "https://yourcdn.com/images/udawalawe-elephants.jpg",
+            "https://yourcdn.com/images/udawalawe-buffalo.jpg",
+            "https://yourcdn.com/images/udawalawe-birds.jpg"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "120",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "touristType": "Wildlife",
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Your Brand Name",
+            "url": "https://yourdomain.com"
+          }
+        }),
+        dateCreated: "2025-05-13",
+        dateModified: "2025-05-13",
+        author: "Your Brand Name",
+        category: "Wildlife & Safari Tours"
       }
     ];
 
