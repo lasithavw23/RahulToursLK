@@ -1,4 +1,11 @@
 // Tour Types
+export interface Place {
+  title: string;
+  imagePreview: string;
+  shortDescription: string;
+  description: string;
+}
+
 export interface Tour {
   id: number;
   slug: string;
@@ -9,22 +16,23 @@ export interface Tour {
   rating: number;
   price: number;
   duration: number;
-  isPopular?: boolean;
-  isNew?: boolean;
-  itinerary: ItineraryDay[];
-  included: string[];
-  excluded: string[];
+  isFeatured?: boolean;
+  places: Place[];
   mapLink?: string;
   gallery: string[];
-  destinationId: number;
-}
-
-export interface ItineraryDay {
-  day: number;
-  title: string;
-  description: string;
-  meals: string[];
-  accommodation: string;
+  
+  // SEO Optimization Fields
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  canonicalUrl: string;
+  structuredData?: string;
+  
+  // Additional helpful fields for SEO
+  dateCreated?: string;
+  dateModified?: string;
+  author?: string;
+  category?: string;
 }
 
 // Destination Types
