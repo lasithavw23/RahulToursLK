@@ -14,14 +14,9 @@ export default function TourCard({ tour }: TourCardProps) {
           alt={tour.title}
           className="w-full h-full object-cover transition duration-400"
         />
-        {tour.isPopular && (
+        {tour.isFeatured && (
           <div className="absolute top-4 right-4 bg-accent text-white text-sm font-medium px-3 py-1 rounded-full">
-            Most Popular
-          </div>
-        )}
-        {tour.isNew && (
-          <div className="absolute top-4 right-4 bg-secondary text-white text-sm font-medium px-3 py-1 rounded-full">
-            New Tour
+            Featured
           </div>
         )}
       </div>

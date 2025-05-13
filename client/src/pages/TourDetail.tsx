@@ -61,9 +61,23 @@ export default function TourDetail() {
   return (
     <>
       <Helmet>
-        <title>{`${tour.title} - Dear Sri Lanka`}</title>
-        <meta name="description" content={tour.shortDescription} />
-        <link rel="canonical" href={`https://dearsrilanka.com/tours/${tour.slug}`} />
+        <title>{tour.metaTitle || `${tour.title} - Dear Sri Lanka`}</title>
+        <meta name="description" content={tour.metaDescription || tour.shortDescription} />
+        <link rel="canonical" href={tour.canonicalUrl || `https://dearsrilanka.com/tours/${tour.slug}`} />
+        {tour.keywords && tour.keywords.length > 0 && (
+          <meta name="keywords" content={tour.keywords.join(', ')} />
+        )}
+        {tour.dateModified && (
+          <meta property="article:modified_time" content={tour.dateModified} />
+        )}
+        {tour.dateCreated && (
+          <meta property="article:published_time" content={tour.dateCreated} />
+        )}
+        {tour.structuredData && (
+          <script type="application/ld+json">
+            {tour.structuredData}
+          </script>
+        )}
       </Helmet>
 
       {/* Main Content */}
@@ -111,14 +125,14 @@ export default function TourDetail() {
                 <i className="fas fa-clock text-primary mr-2"></i>
                 <span>{tour.duration} Days</span>
               </div>
-              {tour.isPopular && (
+              {tour.isFeatured && (
                 <div className="px-3 py-1 bg-accent text-white text-sm rounded-full">
-                  Most Popular
+                  Featured Tour
                 </div>
               )}
-              {tour.isNew && (
+              {tour.category && (
                 <div className="px-3 py-1 bg-secondary text-white text-sm rounded-full">
-                  New Tour
+                  {tour.category}
                 </div>
               )}
             </div>
@@ -174,70 +188,34 @@ export default function TourDetail() {
         </div>
 
         {/* Tour Details Tabs */}
-        <Tabs defaultValue="itinerary" className="mb-12">
+        <Tabs defaultValue="places" className="mb-12">
           <TabsList className="w-full border-b justify-start mb-8">
-            <TabsTrigger value="itinerary" className="text-lg">Itinerary</TabsTrigger>
-            <TabsTrigger value="included" className="text-lg">Included/Excluded</TabsTrigger>
+            <TabsTrigger value="places" className="text-lg">Places to Visit</TabsTrigger>
             <TabsTrigger value="map" className="text-lg">Map</TabsTrigger>
           </TabsList>
           
-          <TabsContent value="itinerary" className="mt-0">
-            <div className="space-y-8">
-              {tour.itinerary.map((day, index) => (
-                <div key={index} className="border-l-4 border-primary pl-6 pb-8 relative">
-                  <div className="absolute w-4 h-4 bg-primary rounded-full -left-[10px] top-0"></div>
-                  <h3 className="text-xl font-display font-bold mb-2">
-                    Day {day.day}: {day.title}
-                  </h3>
-                  <p className="text-neutral-700 dark:text-neutral-300 mb-4">
-                    {day.description}
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <div className="bg-neutral-100 dark:bg-neutral-800 px-4 py-2 rounded-md">
-                      <span className="font-medium">Meals:</span>{" "}
-                      {day.meals.join(", ")}
-                    </div>
-                    <div className="bg-neutral-100 dark:bg-neutral-800 px-4 py-2 rounded-md">
-                      <span className="font-medium">Accommodation:</span>{" "}
-                      {day.accommodation}
-                    </div>
+          <TabsContent value="places" className="mt-0">
+            <div className="space-y-12">
+              {tour.places.map((place, index) => (
+                <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8">
+                  <div className="h-80 overflow-hidden rounded-lg">
+                    <img 
+                      src={place.imagePreview} 
+                      alt={place.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display font-bold mb-3">{place.title}</h3>
+                    <p className="text-neutral-600 dark:text-neutral-400 font-medium mb-4">
+                      {place.shortDescription}
+                    </p>
+                    <p className="text-neutral-700 dark:text-neutral-300">
+                      {place.description}
+                    </p>
                   </div>
                 </div>
               ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="included" className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-display font-bold mb-4">
-                  <i className="fas fa-check-circle text-primary mr-2"></i>
-                  What's Included
-                </h3>
-                <ul className="space-y-3">
-                  {tour.included.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <i className="fas fa-check text-primary mt-1 mr-3"></i>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-display font-bold mb-4">
-                  <i className="fas fa-times-circle text-red-500 mr-2"></i>
-                  What's Not Included
-                </h3>
-                <ul className="space-y-3">
-                  {tour.excluded.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <i className="fas fa-times text-red-500 mt-1 mr-3"></i>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </TabsContent>
           

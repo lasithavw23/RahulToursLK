@@ -68,22 +68,28 @@ export const tours = pgTable("tours", {
   price: doublePrecision("price").notNull(),
   duration: integer("duration").notNull(),
   rating: doublePrecision("rating").notNull(),
-  isPopular: boolean("is_popular").default(false),
-  isNew: boolean("is_new").default(false),
-  itinerary: jsonb("itinerary").notNull(),
-  included: text("included").array().notNull(),
-  excluded: text("excluded").array().notNull(),
+  isFeatured: boolean("is_featured").default(false),
+  places: jsonb("places").notNull(),
   mapLink: text("map_link"),
   gallery: text("gallery").array().notNull(),
-  destinationId: integer("destination_id").references(() => destinations.id),
+  
+  // SEO Fields
+  metaTitle: text("meta_title").notNull(),
+  metaDescription: text("meta_description").notNull(),
+  keywords: text("keywords").array().notNull(),
+  canonicalUrl: text("canonical_url").notNull(),
+  structuredData: text("structured_data"),
+  
+  // Additional SEO Fields
+  dateCreated: timestamp("date_created").defaultNow().notNull(),
+  dateModified: timestamp("date_modified").defaultNow().notNull(),
+  author: text("author"),
+  category: text("category"),
+  
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
-export const toursRelations = relations(tours, ({ one, many }) => ({
-  destination: one(destinations, {
-    fields: [tours.destinationId],
-    references: [destinations.id],
-  }),
+export const toursRelations = relations(tours, ({ many }) => ({
   bookings: many(bookings),
 }));
 
@@ -96,14 +102,17 @@ export const insertTourSchema = createInsertSchema(tours).pick({
   price: true,
   duration: true,
   rating: true,
-  isPopular: true,
-  isNew: true,
-  itinerary: true,
-  included: true,
-  excluded: true,
+  isFeatured: true,
+  places: true,
   mapLink: true,
   gallery: true,
-  destinationId: true,
+  metaTitle: true,
+  metaDescription: true,
+  keywords: true,
+  canonicalUrl: true,
+  structuredData: true,
+  author: true,
+  category: true,
 });
 
 // Testimonials table
