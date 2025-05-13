@@ -319,31 +319,40 @@ export class MemStorage implements IStorage {
             description: "Mihintale is considered the cradle of Buddhism in Sri Lanka, where Buddhist monk Mahinda met King Devanampiyatissa and introduced Buddhism to the country in 247 BCE. Located about 12 kilometers east of Anuradhapura, this sacred mountain peak features ancient rock inscriptions, stone steps, stupas, and cave temples. The panoramic views from the summit are spectacular, especially at sunrise or sunset."
           }
         ],
-        included: [
-          "Accommodation in 4-5 star hotels",
-          "Daily breakfast and dinner",
-          "Private air-conditioned transportation",
-          "Professional English-speaking guide",
-          "Entrance fees to all mentioned sites",
-          "Traditional cultural performances",
-          "Airport transfers"
-        ],
-        excluded: [
-          "International flights",
-          "Visa fees",
-          "Lunches and beverages",
-          "Personal expenses",
-          "Tips and gratuities",
-          "Travel insurance",
-          "Camera and video permits at certain sites"
-        ],
         mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4047271.2199384123!2d78.4135179243458!3d7.851732110528847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0xe13da4b400e2d38c!2sSri%20Lanka!5e0!3m2!1sen!2sus!4v1652345678901!5m2!1sen!2sus",
         gallery: [
           "https://pixabay.com/get/g2a5074338a2b6823a7d567b75986089770057a9900a1e3ef063d9be676ff3b5d0ef8406e9309796f7e5149aba4b088877e024536e4cc407874f70a16d52a9767_1280.jpg",
           "https://pixabay.com/get/g8d2ddffb6d1a9dbf5838d3473b5beff99899803e987c0cc8dc59892a18fde10deee3d7e78aad13ae48bc05a3b78a17c01d70c24044457230ceac4b99f6506e66_1280.jpg",
           "https://pixabay.com/get/gce14b87940bfe1269086737799e2bd94387e0e59180d7e47180597c501371c28d694412577c62e17bf88161850e16c297eaae540da011dd2d72581bff23c419c_1280.jpg"
         ],
-        destinationId: 1
+        metaTitle: "Cultural Heritage Tour: 10-Day Sri Lanka Cultural Triangle Experience | Travel Sri Lanka",
+        metaDescription: "Discover Sri Lanka's rich cultural heritage on our 10-day tour. Visit ancient cities, sacred temples, and UNESCO World Heritage sites throughout the Cultural Triangle.",
+        keywords: ["Sri Lanka cultural tour", "Cultural Triangle Sri Lanka", "Anuradhapura tour", "Mihintale tour", "Sri Lanka UNESCO sites", "ancient cities Sri Lanka", "cultural heritage Sri Lanka", "Buddhist temples Sri Lanka"],
+        canonicalUrl: "https://travel-sri-lanka.com/tours/cultural-heritage",
+        structuredData: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          "name": "Cultural Heritage Tour",
+          "description": "Immerse yourself in Sri Lanka's rich cultural heritage with this comprehensive 10-day tour.",
+          "touristType": ["History buffs", "Culture enthusiasts", "Heritage travelers"],
+          "offers": {
+            "@type": "Offer",
+            "price": 1199,
+            "priceCurrency": "USD"
+          },
+          "itinerary": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Colombo"},
+              {"@type": "ListItem", "position": 2, "name": "Anuradhapura"},
+              {"@type": "ListItem", "position": 3, "name": "Mihintale"}
+            ]
+          }
+        }),
+        dateCreated: "2025-05-13",
+        dateModified: "2025-05-13",
+        author: "Travel Sri Lanka",
+        category: "Cultural Tours"
       },
       {
         title: "Wildlife Safari Adventure",
@@ -354,48 +363,26 @@ export class MemStorage implements IStorage {
         price: 1349,
         duration: 8,
         rating: 4.7,
-        isPopular: false,
-        isNew: true,
-        itinerary: [
+        isFeatured: true,
+        places: [
           {
-            day: 1,
-            title: "Arrival & Transfer to Habarana",
-            description: "Welcome to Sri Lanka! Upon arrival at Bandaranaike International Airport, you'll be greeted by your guide and transferred to your hotel in Habarana, a strategic location for exploring the wildlife areas of the Cultural Triangle.",
-            meals: ["Dinner"],
-            accommodation: "Cinnamon Lodge or similar"
+            title: "Minneriya National Park",
+            imagePreview: "https://pixabay.com/get/gd1ec97f470381dddb4bdf5755bf7543efd50cb84613b8787fd2f124749ef6409cc4b473d5f6a52354076ffbf59e5969ea9987f8f42b870494619aaf87bd1a3fe_1280.jpg",
+            shortDescription: "Famous for spectacular elephant gatherings during the dry season",
+            description: "Minneriya National Park is renowned for its amazing elephant gatherings - one of the largest wild elephant assemblies in the world. During the dry season (August-September), hundreds of elephants come to the shores of Minneriya Tank to drink, feed, and bathe. The park is also home to sambar deer, macaques, sloth bears, and numerous bird species. The centerpiece of the park is the ancient Minneriya Tank, a reservoir built by King Mahasena in the 3rd century AD."
           },
           {
-            day: 2,
-            title: "Minneriya National Park Safari",
-            description: "Morning at leisure. In the afternoon, embark on a jeep safari in Minneriya National Park, famous for its large elephant gatherings, especially during the dry season (August-September) when hundreds of elephants come to the shores of Minneriya Tank.",
-            meals: ["Breakfast", "Dinner"],
-            accommodation: "Cinnamon Lodge or similar"
+            title: "Yala National Park",
+            imagePreview: "https://pixabay.com/get/g2f9b0c6f8d232532e8a1ac29c5f9e34be9f5df254eb62bc53cb6ef5c6a5e77dab9ee00a6d89e93e5a9b6c7a6d0ea2d1da51fcb9a8dc9fd85b18b2d835a8e2624_1280.jpg",
+            shortDescription: "Sri Lanka's most visited wildlife sanctuary with the highest leopard density in the world",
+            description: "Yala National Park, Sri Lanka's most famous wildlife sanctuary, boasts the highest density of leopards in the world, offering the best chances to witness these elusive big cats in their natural habitat. The park's diverse ecosystems include monsoon forests, grasslands, marine wetlands, and sandy beaches. Besides leopards, visitors can spot elephants, sloth bears, crocodiles, and over 200 bird species. The park also features important cultural sites like the ancient Sithulpawwa monastery."
           },
           {
-            day: 3,
-            title: "Habarana to Yala",
-            description: "After breakfast, drive to Yala National Park, home to one of the highest leopard densities in the world. En route, visit the Dambulla Cave Temple, a UNESCO World Heritage site. Arrive at your safari lodge in time for an evening safari.",
-            meals: ["Breakfast", "Dinner"],
-            accommodation: "Jetwing Yala or similar"
+            title: "Udawalawe National Park",
+            imagePreview: "https://pixabay.com/get/gb3a1a6b86f35d76a2c1ef3c46def3c45e7c8e183dd8e41b0cad2d27d19752f0b6e7c70db47a5d9d1ace3efd834c10d51d18cc979f54c5a7a2c7cc63bcfdd518e_1280.jpg",
+            shortDescription: "A sanctuary created for displaced elephants with guaranteed sightings",
+            description: "Udawalawe National Park was established as a sanctuary for wild elephants displaced by the construction of the Udawalawe Reservoir. Today, it's one of the best places in Sri Lanka for guaranteed elephant sightings, with around 500 elephants residing within its boundaries. The park's relatively flat terrain and open grasslands make wildlife spotting particularly rewarding. Nearby, the Elephant Transit Home rehabilitates orphaned elephant calves before releasing them back into the wild."
           }
-        ],
-        included: [
-          "Accommodation in wildlife lodges and hotels",
-          "Daily breakfast and dinner",
-          "Private air-conditioned transportation",
-          "Professional English-speaking naturalist guide",
-          "Jeep safaris in national parks with tracker",
-          "Entrance fees to all national parks",
-          "Airport transfers"
-        ],
-        excluded: [
-          "International flights",
-          "Visa fees",
-          "Lunches and beverages",
-          "Personal expenses",
-          "Tips and gratuities",
-          "Travel insurance",
-          "Camera fees in national parks"
         ],
         mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4047271.2199384123!2d78.4135179243458!3d7.851732110528847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0xe13da4b400e2d38c!2sSri%20Lanka!5e0!3m2!1sen!2sus!4v1652345678901!5m2!1sen!2sus",
         gallery: [
