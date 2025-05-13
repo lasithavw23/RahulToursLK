@@ -24,24 +24,34 @@ export default function HeroSlider() {
         >
           <img
             src={image}
-            alt={index === 0 ? "Sigiriya Rock Fortress Romantic View at Sunset" : `Sri Lanka scenic view ${index}`}
+            alt={
+              index === 0 
+                ? "Sigiriya Rock Fortress Romantic View at Sunset" 
+                : index === 1 
+                  ? "Sri Lanka Safari Elephants Watching Experience"
+                  : `Sri Lanka scenic view ${index}`
+            }
             className="w-full h-full object-cover"
-            loading={index === 0 ? "eager" : "lazy"}
+            loading={index < 2 ? "eager" : "lazy"}
           />
           <div className="slide-content absolute inset-0 flex flex-col justify-end items-center text-white p-8 md:p-16">
             <div className="container mx-auto">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-4 animate-fadeInUp">
                 {index === 0 
-                  ? "Sigiriya Rock - Explore the 8th Wonder of the World" 
-                  : "Discover the Pearl of the Indian Ocean"}
+                  ? "Sigiriya Rock - Explore Ancient Heritage" 
+                  : index === 1
+                    ? "Wild Safari Adventure"
+                    : "Discover the Pearl of the Indian Ocean"}
               </h1>
               <p
                 className="text-lg md:text-xl max-w-2xl mb-8 animate-fadeInUp"
                 style={{ animationDelay: "0.2s" }}
               >
                 {index === 0
-                  ? "Experience the magic of Sigiriya's ancient fortress and breathtaking views at sunset with our guided tours."
-                  : "Experience the stunning beaches, ancient temples, and diverse wildlife of Sri Lanka with our exclusive tours."}
+                  ? "Step into the past and discover Sri Lanka's rich cultural legacy. Ancient castles, cities, sacred temples, and timeless traditions await you."
+                  : index === 1
+                    ? "Get closer to nature in Sri Lanka's untamed wilderness. Experience thrilling wildlife encounters with leopards, elephants and breathtaking landscapes."
+                    : "Experience the stunning beaches, ancient temples, and diverse wildlife of Sri Lanka with our exclusive tours."}
               </p>
               <div
                 className="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
