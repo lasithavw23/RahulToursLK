@@ -4,6 +4,7 @@ export interface Place {
   imagePreview: string;
   shortDescription: string;
   description: string;
+  thingsToDo?: string[]; // Activities and things to do at this place
   slug?: string; // Optional since it will be generated on the fly
 }
 

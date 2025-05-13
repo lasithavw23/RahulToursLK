@@ -34,14 +34,34 @@ export default function AttractionDetail() {
     }
   }, [tours, slug]);
 
+  const generateThingsToDo = (place: Place): Place => {
+    if (!place.thingsToDo || place.thingsToDo.length === 0) {
+      // Create some generic activities based on the place name and description
+      const activities = [
+        `Explore the ${place.title} area`,
+        `Take memorable photos at ${place.title}`,
+        `Learn about the history of ${place.title}`,
+        `Experience the local culture around ${place.title}`,
+        `Visit the nearby attractions`,
+        `Try local cuisine near ${place.title}`
+      ];
+      return {
+        ...place,
+        thingsToDo: activities
+      };
+    }
+    return place;
+  };
+
   const findAttractionBySlug = (tours: Tour[], attractionSlug: string): Place | null => {
     for (const tour of tours) {
       if (tour.places && Array.isArray(tour.places)) {
         for (const place of tour.places) {
           const placeSlug = place.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
           if (placeSlug === attractionSlug) {
-            // Return the place with added slug
-            return { ...place, slug: placeSlug };
+            // Return the place with added slug and things to do
+            const placeWithSlug = { ...place, slug: placeSlug };
+            return generateThingsToDo(placeWithSlug);
           }
         }
       }
@@ -111,6 +131,7 @@ export default function AttractionDetail() {
             <Tabs defaultValue="overview" className="w-full">
               <TabsList className="mb-8">
                 <TabsTrigger value="overview">Overview</TabsTrigger>
+                <TabsTrigger value="things-to-do">Things to Do</TabsTrigger>
                 <TabsTrigger value="tours">Related Tours</TabsTrigger>
               </TabsList>
               
@@ -124,6 +145,39 @@ export default function AttractionDetail() {
                     <h2 className="text-2xl font-bold mb-4">About {attraction.title}</h2>
                     <p>{attraction.description}</p>
                   </div>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="things-to-do" className="space-y-6">
+                <div className="prose dark:prose-invert max-w-none">
+                  <h2 className="text-2xl font-bold mb-6">Things to Do at {attraction.title}</h2>
+                  
+                  {attraction.thingsToDo && attraction.thingsToDo.length > 0 ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {attraction.thingsToDo.map((activity, index) => (
+                        <div 
+                          key={index} 
+                          className="bg-white dark:bg-neutral-800 p-5 rounded-lg shadow-sm border border-neutral-100 dark:border-neutral-700"
+                        >
+                          <div className="flex items-start">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                              <span className="text-lg font-bold">{index + 1}</span>
+                            </div>
+                            <div className="ml-4">
+                              <h3 className="text-lg font-semibold mb-2">{activity}</h3>
+                              <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+                                Experience the unique charm and authenticity of Sri Lanka through this activity.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-neutral-600 dark:text-neutral-400">
+                      Information about activities at this attraction is currently being updated.
+                    </p>
+                  )}
                 </div>
               </TabsContent>
               

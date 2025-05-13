@@ -12,7 +12,6 @@ export const CTA_IMAGE = "https://pixabay.com/get/g16d294b5389cfbbf074e9636686dd
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/tours", label: "Tours" },
-  { href: "/destinations", label: "Destinations" },
   { href: "/attractions", label: "Attractions" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
@@ -74,7 +73,7 @@ export const SOCIAL_MEDIA = [
 
 export const QUICK_LINKS = [
   { href: "/tours", label: "Tours" },
-  { href: "/destinations", label: "Destinations" },
+  { href: "/attractions", label: "Attractions" },
   { href: "/experiences", label: "Experiences" },
   { href: "/about", label: "About Us" },
   { href: "/blog", label: "Travel Blog" },

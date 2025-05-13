@@ -40,6 +40,24 @@ export default function Attractions() {
     }
   }, [tours]);
 
+  // Generate placeholder things to do for places that don't have them
+  const generateThingsToDo = (place: Place): Place => {
+    if (!place.thingsToDo || place.thingsToDo.length === 0) {
+      // Create some generic activities based on the place name and description
+      const activities = [
+        `Explore the ${place.title} area`,
+        `Take memorable photos at ${place.title}`,
+        `Learn about the history of ${place.title}`,
+        `Experience the local culture around ${place.title}`
+      ];
+      return {
+        ...place,
+        thingsToDo: activities
+      };
+    }
+    return place;
+  };
+
   return (
     <div className="container mx-auto px-4 py-12">
       <Helmet>
@@ -69,6 +87,8 @@ export default function Attractions() {
           {attractions.map((attraction, index) => {
             // Generate a slug for linking
             const slug = attraction.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+            // Ensure attraction has thingsToDo
+            const enrichedAttraction = generateThingsToDo(attraction);
             
             return (
               <Link 
@@ -79,19 +99,40 @@ export default function Attractions() {
                 <div className="bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="h-64 overflow-hidden relative">
                     <img 
-                      src={attraction.imagePreview} 
-                      alt={attraction.title} 
+                      src={enrichedAttraction.imagePreview} 
+                      alt={enrichedAttraction.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   </div>
                   <div className="p-6">
                     <h2 className="text-xl font-display font-bold mb-2 text-neutral-800 dark:text-white">
-                      {attraction.title}
+                      {enrichedAttraction.title}
                     </h2>
                     <p className="text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">
-                      {attraction.shortDescription}
+                      {enrichedAttraction.shortDescription}
                     </p>
+                    
+                    {/* Show a preview of things to do */}
+                    {enrichedAttraction.thingsToDo && enrichedAttraction.thingsToDo.length > 0 && (
+                      <div className="mb-4">
+                        <h3 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                          Things to Do:
+                        </h3>
+                        <ul className="text-sm text-neutral-600 dark:text-neutral-400">
+                          {enrichedAttraction.thingsToDo.slice(0, 2).map((activity, idx) => (
+                            <li key={idx} className="flex items-start mb-1">
+                              <span className="text-primary mr-2">•</span>
+                              <span className="line-clamp-1">{activity}</span>
+                            </li>
+                          ))}
+                          {enrichedAttraction.thingsToDo.length > 2 && (
+                            <li className="text-primary text-xs">+ {enrichedAttraction.thingsToDo.length - 2} more</li>
+                          )}
+                        </ul>
+                      </div>
+                    )}
+                    
                     <div className="text-primary font-medium group-hover:text-primary-dark transition-colors duration-300">
                       Explore more →
                     </div>
