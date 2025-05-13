@@ -161,48 +161,26 @@ export class MemStorage implements IStorage {
         price: 899,
         duration: 7,
         rating: 4.9,
-        isPopular: true,
-        isNew: false,
-        itinerary: [
+        isFeatured: true,
+        places: [
           {
-            day: 1,
-            title: "Arrival & Transfer to Negombo",
-            description: "Welcome to Sri Lanka! Upon arrival at Bandaranaike International Airport, you'll be greeted by your guide and transferred to your beachfront hotel in Negombo. Enjoy the rest of the day at leisure to relax after your flight.",
-            meals: ["Dinner"],
-            accommodation: "Jetwing Blue or similar"
+            title: "Negombo",
+            imagePreview: "https://pixabay.com/get/ge873304aac92154d4e9587c9614f77b133f4d1b12233f27eecaf54d2b5620a637a65afa978023ec0816e993849fdafa4fdcd10130be56b66496118145b7fde81_1280.jpg",
+            shortDescription: "A coastal town with beautiful beaches and a historic Dutch canal",
+            description: "Negombo is a major city situated on the west coast of Sri Lanka, north of the capital Colombo. Its economy is mainly based on tourism and its centuries-old fishing industry. Negombo is known for its long sandy beaches and its busy fish markets. The town has a majority of Roman Catholics and is sometimes called 'Little Rome' due to the many churches in the area."
           },
           {
-            day: 2,
-            title: "Negombo to Bentota",
-            description: "After breakfast, enjoy a brief city tour of Negombo before heading south to Bentota. En route, visit a turtle hatchery to learn about conservation efforts. Check into your beach resort and enjoy the afternoon at leisure.",
-            meals: ["Breakfast", "Dinner"],
-            accommodation: "Avani Bentota or similar"
+            title: "Bentota",
+            imagePreview: "https://pixabay.com/get/gadeeb6d563a2449a0acafb9d10402756211cc105c4c62d31d7348b4bded21540892ebaaae6f66da6bfbb5dd85a180032fa86c5634cbdd145b3d8efe355e0b38e_1280.jpg",
+            shortDescription: "A coastal paradise known for golden beaches and water sports",
+            description: "Bentota is a coastal town famous for its stunning golden beaches and array of water sports. Located where the Bentota River meets the Indian Ocean, it offers a perfect blend of seaside relaxation and river adventures. Visitors can enjoy jet skiing, windsurfing, and boat rides along the Bentota River. The area is also home to turtle hatcheries where conservation efforts are helping to protect endangered sea turtles."
           },
           {
-            day: 3,
-            title: "Bentota Beach Day",
-            description: "Full day to enjoy Bentota's golden beaches. Optional water sports activities including jet skiing, wind surfing, and boat rides on Bentota River are available.",
-            meals: ["Breakfast", "Dinner"],
-            accommodation: "Avani Bentota or similar"
+            title: "Mirissa",
+            imagePreview: "https://pixabay.com/get/g7dcfa9df2f9eb0d37cd90f0aab8bb3917d17e4b6a8794d20cf51da0be101db9f79d0a6ba8deeaa71164482c25f0e0c241f7d1bb051dae58707ee2cefb28fa48d_1280.jpg",
+            shortDescription: "A picturesque beach destination known for whale watching",
+            description: "Mirissa is a small town on the south coast of Sri Lanka, famous for its stunning crescent-shaped beach and as one of the best spots in the world for whale watching. Between November and April, blue whales and sperm whales can be spotted just a few kilometers offshore. The laid-back atmosphere, palm-fringed beaches, and spectacular sunsets make Mirissa a perfect destination for relaxation."
           }
-        ],
-        included: [
-          "Accommodation in 4-5 star hotels",
-          "Daily breakfast and dinner",
-          "Private air-conditioned transportation",
-          "English-speaking guide",
-          "Entrance fees to all mentioned sites",
-          "Whale watching excursion in Mirissa (seasonal)",
-          "Airport transfers"
-        ],
-        excluded: [
-          "International flights",
-          "Visa fees",
-          "Lunches and beverages",
-          "Personal expenses",
-          "Tips and gratuities",
-          "Travel insurance",
-          "Optional activities not mentioned"
         ],
         mapLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4047271.2199384123!2d78.4135179243458!3d7.851732110528847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2593cf65a1e9d%3A0xe13da4b400e2d38c!2sSri%20Lanka!5e0!3m2!1sen!2sus!4v1652345678901!5m2!1sen!2sus",
         gallery: [
@@ -210,7 +188,31 @@ export class MemStorage implements IStorage {
           "https://pixabay.com/get/gadeeb6d563a2449a0acafb9d10402756211cc105c4c62d31d7348b4bded21540892ebaaae6f66da6bfbb5dd85a180032fa86c5634cbdd145b3d8efe355e0b38e_1280.jpg",
           "https://pixabay.com/get/g7dcfa9df2f9eb0d37cd90f0aab8bb3917d17e4b6a8794d20cf51da0be101db9f79d0a6ba8deeaa71164482c25f0e0c241f7d1bb051dae58707ee2cefb28fa48d_1280.jpg"
         ],
-        destinationId: 3
+        metaTitle: "Beach Paradise Tour: 7-Day Sri Lanka Coastal Experience | Travel Sri Lanka",
+        metaDescription: "Explore Sri Lanka's stunning beaches on our 7-day Beach Paradise Tour. Visit Negombo, Bentota & Mirissa. Enjoy whale watching, water sports & beachfront resorts.",
+        keywords: ["Sri Lanka beaches", "Bentota beach", "Mirissa whale watching", "Sri Lanka coastal tour", "beach holiday Sri Lanka", "Negombo beach", "Sri Lanka water sports"],
+        canonicalUrl: "https://travel-sri-lanka.com/tours/beach-paradise",
+        structuredData: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          "name": "Beach Paradise Tour",
+          "description": "Experience Sri Lanka's stunning coastline with this 7-day tour.",
+          "touristType": ["Couples", "Beach lovers", "Water sports enthusiasts"],
+          "offers": {
+            "@type": "Offer",
+            "price": 899,
+            "priceCurrency": "USD"
+          },
+          "itinerary": {
+            "@type": "ItemList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Negombo"},
+              {"@type": "ListItem", "position": 2, "name": "Bentota"},
+              {"@type": "ListItem", "position": 3, "name": "Mirissa"}
+            ]
+          }
+        }),
+        category: "Beach Tours"
       },
       {
         title: "Cultural Heritage Tour",
@@ -490,12 +492,11 @@ export class MemStorage implements IStorage {
   ): Promise<Tour[]> {
     let tours = Array.from(this.tours.values());
 
-    // Filter by destination
+    // Filter by destination/category
     if (destination) {
-      const destinationObj = await this.getDestinationBySlug(destination);
-      if (destinationObj) {
-        tours = tours.filter(tour => tour.destinationId === destinationObj.id);
-      }
+      tours = tours.filter(tour => 
+        tour.category?.toLowerCase().includes(destination.toLowerCase())
+      );
     }
 
     // Filter by duration
@@ -528,7 +529,7 @@ export class MemStorage implements IStorage {
   }
 
   async getFeaturedTours(): Promise<Tour[]> {
-    return Array.from(this.tours.values()).filter(tour => tour.isPopular || tour.isNew).slice(0, 3);
+    return Array.from(this.tours.values()).filter(tour => tour.isFeatured).slice(0, 3);
   }
 
   async getTourBySlug(slug: string): Promise<Tour | undefined> {
@@ -538,12 +539,10 @@ export class MemStorage implements IStorage {
   }
 
   async getToursByDestination(destinationSlug: string): Promise<Tour[]> {
-    const destination = await this.getDestinationBySlug(destinationSlug);
-    if (!destination) {
-      return [];
-    }
+    // Since we've removed destinationId from tours, we'll just return all tours
+    // In a real implementation, you might want to use tags or a category system instead
     return Array.from(this.tours.values()).filter(
-      (tour) => tour.destinationId === destination.id,
+      (tour) => tour.category?.toLowerCase().includes(destinationSlug.toLowerCase()),
     );
   }
 
