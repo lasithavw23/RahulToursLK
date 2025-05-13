@@ -1,0 +1,81 @@
+export const yalaSafariTour: Tour = {
+  id: 5,
+  slug: "yala-safari-tour",
+  title: "Yala National Park Safari Tour",
+  shortDescription:
+    "Experience an unforgettable wildlife adventure in Yala National Park with a private jeep, complimentary water, and onboard WiFi.",
+  description: `
+    Embark on the ultimate safari adventure with our Yala National Park Safari Tour, the premier wildlife experience in Sri Lanka. Journey deep into Yala’s diverse landscapes-ranging from arid grasslands and dense forests to tranquil lagoons and rocky outcrops-aboard a comfortable, modern jeep equipped with complimentary water and WiFi for your convenience.
+
+    Yala National Park is world-renowned for its exceptional biodiversity and is considered one of the best places on earth to spot the elusive Sri Lankan leopard. Witness herds of elephants, sloth bears, wild buffalo, crocodiles, spotted deer, wild boar, and an incredible variety of birds in their natural habitat. Our expert guides know the park intimately and will help you seek out rare wildlife sightings while sharing fascinating insights about the ecosystem.
+
+    Choose from morning, afternoon, or full-day safari options to maximize your chances of observing wildlife at their most active times. Our tours are designed to avoid crowded routes, ensuring a more exclusive and immersive safari experience. Relax and enjoy the thrill of the wild, knowing that all logistics-from park entry to refreshments-are seamlessly handled for you.
+
+    Perfect for nature lovers, photographers, and adventure seekers, this Yala Safari Tour delivers the best of Sri Lanka’s wilderness in comfort and style.
+  `,
+  imageUrl: "https://yourcdn.com/images/yala-safari-cover.jpg",
+  rating: 4.9,
+  price: 135,
+  duration: 1, // day
+  isFeatured: true,
+  places: [
+    {
+      title: "Yala National Park",
+      imagePreview: "https://yourcdn.com/images/yala-national-park.jpg",
+      shortDescription:
+        "Sri Lanka’s top wildlife sanctuary, famed for leopards, elephants, and breathtaking scenery.",
+      description:
+        "Yala National Park is Sri Lanka’s most celebrated wildlife reserve, covering over 140 square kilometers of varied landscapes. The park is home to the world’s highest density of leopards, as well as elephants, sloth bears, crocodiles, and hundreds of bird species. Explore a mosaic of habitats-from open plains and monsoon forests to wetlands and rocky outcrops-each teeming with wildlife and natural beauty."
+    }
+  ],
+  mapLink:
+    "https://www.google.com/maps/d/embed?mid=1kUeMB-yala-tour-map&hl=en",
+  gallery: [
+    "https://yourcdn.com/images/yala-leopard.jpg",
+    "https://yourcdn.com/images/yala-elephants.jpg",
+    "https://yourcdn.com/images/yala-birds.jpg",
+    "https://yourcdn.com/images/yala-jeep-safari.jpg"
+  ],
+  metaTitle:
+    "Yala Safari Tour | Private Jeep Safari in Yala National Park Sri Lanka",
+  metaDescription:
+    "Book your Yala Safari Tour for a thrilling wildlife adventure in Sri Lanka’s Yala National Park. Spot leopards, elephants, and more with a private jeep, water, and WiFi included.",
+  keywords: [
+    "Yala Safari Tour",
+    "Yala National Park safari",
+    "Sri Lanka wildlife tours",
+    "Jeep safari Yala",
+    "Leopard safari Sri Lanka",
+    "Yala jeep tour",
+    "Wildlife safari Sri Lanka"
+  ],
+  canonicalUrl: "https://yourdomain.com/tours/yala-safari-tour",
+  structuredData: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Yala National Park Safari Tour",
+    "description":
+      "Experience a private jeep safari in Yala National Park, Sri Lanka. Spot leopards, elephants, and more. Includes water, WiFi, and expert guides.",
+    "image": [
+      "https://yourcdn.com/images/yala-leopard.jpg",
+      "https://yourcdn.com/images/yala-elephants.jpg",
+      "https://yourcdn.com/images/yala-birds.jpg"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "135",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "touristType": "Adventure",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Your Brand Name",
+      "url": "https://yourdomain.com"
+    }
+  }),
+  dateCreated: "2025-05-13",
+  dateModified: "2025-05-13",
+  author: "Your Brand Name",
+  category: "Wildlife & Safari Tours"
+};
