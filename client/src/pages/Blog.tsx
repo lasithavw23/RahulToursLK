@@ -40,12 +40,12 @@ export default function Blog() {
   return (
     <>
       <Helmet>
-        <title>Travel Blog - Sri Lanka Travel Tips & Guides | Dear Sri Lanka</title>
+        <title>Travel Blog - Sri Lanka Travel Tips & Guides | Rahul Tours Sri Lanka</title>
         <meta 
           name="description" 
           content="Discover travel tips, destination guides, and insider advice for planning your perfect Sri Lankan vacation in our travel blog."
         />
-        <link rel="canonical" href="https://dearsrilanka.com/blog" />
+        <link rel="canonical" href="https://rahultoursrilanka.com/blog" />
       </Helmet>
 
       {/* Hero Section */}

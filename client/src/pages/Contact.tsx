@@ -77,7 +77,7 @@ export default function Contact() {
           name="description" 
           content="Have questions about your Sri Lanka trip? Contact our travel experts for personalized assistance with planning your perfect vacation."
         />
-        <link rel="canonical" href="https://dearsrilanka.com/contact" />
+        <link rel="canonical" href="https://rahultoursrilanka.com/contact" />
       </Helmet>
 
       {/* Hero Section */}

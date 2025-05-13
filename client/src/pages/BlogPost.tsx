@@ -62,7 +62,7 @@ export default function BlogPostPage() {
   return (
     <>
       <Helmet>
-        <title>{`${post.title} | Dear Sri Lanka Blog`}</title>
+        <title>{`${post.title} | Rahul Tours Sri Lanka Blog`}</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={`https://dearsrilanka.com/blog/${post.slug}`} />
       </Helmet>
