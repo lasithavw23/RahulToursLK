@@ -832,8 +832,8 @@ The Golden Temple of Dambulla offers a serene and contemplative atmosphere that 
   ): Promise<Tour[]> {
     let tours = Array.from(this.tours.values());
 
-    // Filter by destination if specified
-    if (destination) {
+    // Filter by destination if specified and not 'all'
+    if (destination && destination !== 'all') {
       const dest = await this.getDestinationBySlug(destination);
       if (dest) {
         // This filter is now removed as we don't have destinationId in the tour schema anymore
@@ -841,25 +841,29 @@ The Golden Temple of Dambulla offers a serene and contemplative atmosphere that 
       }
     }
 
-    // Filter by duration if specified
-    if (duration) {
+    // Filter by duration if specified and not 'any'
+    if (duration && duration !== 'any') {
       if (duration === "1-3") {
         tours = tours.filter((tour) => tour.duration >= 1 && tour.duration <= 3);
       } else if (duration === "4-7") {
         tours = tours.filter((tour) => tour.duration >= 4 && tour.duration <= 7);
-      } else if (duration === "8+") {
-        tours = tours.filter((tour) => tour.duration >= 8);
+      } else if (duration === "8-14") {
+        tours = tours.filter((tour) => tour.duration >= 8 && tour.duration <= 14);
+      } else if (duration === "15+") {
+        tours = tours.filter((tour) => tour.duration >= 15);
       }
     }
 
-    // Filter by price range if specified
-    if (priceRange) {
-      if (priceRange === "budget") {
-        tours = tours.filter((tour) => tour.price < 200);
-      } else if (priceRange === "mid-range") {
-        tours = tours.filter((tour) => tour.price >= 200 && tour.price <= 500);
-      } else if (priceRange === "luxury") {
-        tours = tours.filter((tour) => tour.price > 500);
+    // Filter by price range if specified and not 'any'
+    if (priceRange && priceRange !== 'any') {
+      if (priceRange === "under-500") {
+        tours = tours.filter((tour) => tour.price < 500);
+      } else if (priceRange === "500-1000") {
+        tours = tours.filter((tour) => tour.price >= 500 && tour.price < 1000);
+      } else if (priceRange === "1000-1500") {
+        tours = tours.filter((tour) => tour.price >= 1000 && tour.price < 1500);
+      } else if (priceRange === "over-1500") {
+        tours = tours.filter((tour) => tour.price >= 1500);
       }
     }
 
