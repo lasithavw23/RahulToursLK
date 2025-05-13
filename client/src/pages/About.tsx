@@ -129,8 +129,6 @@ export default function About() {
         </div>
       </section>
 
-
-
       {/* Call to Action */}
       <section className="py-16 px-4 bg-primary text-white text-center">
         <div className="container mx-auto max-w-2xl">
