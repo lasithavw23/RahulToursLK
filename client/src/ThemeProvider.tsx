@@ -22,17 +22,13 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
   // Apply initial theme on component mount
   useEffect(() => {
-    document.documentElement.classList.remove('dark');
-    document.documentElement.classList.add('light');
-    
     // Check if theme is saved in localStorage
     const storedTheme = localStorage.getItem('theme') as Theme | null;
-    if (storedTheme) {
+    if (storedTheme && (storedTheme === 'light' || storedTheme === 'dark')) {
       setTheme(storedTheme);
-      document.documentElement.classList.remove('light', 'dark');
-      document.documentElement.classList.add(storedTheme);
     } else {
       // Set to light theme by default
+      setTheme('light');
       localStorage.setItem('theme', 'light');
     }
   }, []);

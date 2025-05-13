@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Force light mode by default */
-:root {
-  color-scheme: light;
-}
-
 :root {
   --background: 0 0% 100%;
   --foreground: 20 14.3% 4.1%;
