@@ -1,0 +1,84 @@
+export const sigiriyaDambullaTour: Tour = {
+  id: 1,
+  slug: "sigiriya-dambulla-tour",
+  title: "Sigiriya & Dambulla UNESCO Heritage Day Tour",
+  shortDescription:
+    "Experience Sri Lanka’s ancient wonders on a day tour to Sigiriya Rock Fortress and Dambulla Cave Temple-two must-see UNESCO World Heritage Sites.",
+  description: `
+    Embark on the ultimate cultural adventure with our Sigiriya & Dambulla UNESCO Heritage Day Tour. Ascend the legendary Sigiriya Rock Fortress-often called the 'Eighth Wonder of the World'-and marvel at its ancient frescoes, water gardens, and breathtaking panoramic views. Explore the Dambulla Golden Cave Temple, Sri Lanka’s largest and best-preserved cave temple complex, adorned with over 150 Buddha statues and vibrant murals dating back more than 2,000 years.
+    
+    This expertly guided tour includes comfortable transfers, skip-the-line entry, and in-depth commentary on the rich history and significance of these iconic landmarks. Ideal for history enthusiasts, culture seekers, and adventure travelers, this day trip offers an immersive journey into Sri Lanka's royal past and spiritual heritage. Discover why Sigiriya and Dambulla are top-rated attractions and a must for every Sri Lanka itinerary.
+  `,
+  imageUrl: "https://yourcdn.com/images/sigiriya-dambulla-cover.jpg",
+  rating: 4.8,
+  price: 120,
+  duration: 1,
+  isFeatured: true,
+  places: [
+    {
+      title: "Sigiriya Rock Fortress",
+      imagePreview: "https://yourcdn.com/images/sigiriya-rock.jpg",
+      shortDescription:
+        "Climb the iconic Lion Rock and explore the ancient royal citadel of Sigiriya.",
+      description:
+        "Sigiriya Rock Fortress, a UNESCO World Heritage Site, is renowned for its dramatic 200-meter-high granite peak, ancient royal palace ruins, and exquisite frescoes. Ascend approximately 1,200 steps to reach the summit, passing the famous Mirror Wall and Lion’s Paw Terrace. At the top, enjoy panoramic views of lush landscapes and discover the remains of King Kashyapa’s 5th-century palace. Sigiriya is celebrated as one of Asia’s most impressive archaeological sites and is a highlight of any Sri Lanka tour[6][8][10]."
+    },
+    {
+      title: "Dambulla Cave Temple",
+      imagePreview: "https://yourcdn.com/images/dambulla-temple.jpg",
+      shortDescription:
+        "Discover Sri Lanka’s largest cave temple complex, famed for ancient Buddhist art.",
+      description:
+        "The Dambulla Golden Cave Temple, another UNESCO World Heritage Site, features five spectacular caves filled with over 150 Buddha statues and vibrant wall paintings. Dating back more than two millennia, this sacred pilgrimage site offers a unique glimpse into Sri Lanka’s Buddhist heritage. Admire intricate murals, impressive statues, and the serene atmosphere that has drawn travelers and devotees for centuries[6][8][10]."
+    }
+  ],
+  mapLink:
+    "https://www.google.com/maps/d/embed?mid=1kUeMB-sigiriya-dambulla-tour-map&hl=en",
+  gallery: [
+    "https://yourcdn.com/images/sigiriya-view.jpg",
+    "https://yourcdn.com/images/dambulla-interior.jpg",
+    "https://yourcdn.com/images/sigiriya-mirror-wall.jpg"
+  ],
+  metaTitle:
+    "Sigiriya & Dambulla Day Tour | UNESCO World Heritage Sites Sri Lanka",
+  metaDescription:
+    "Book your Sigiriya & Dambulla Day Tour to explore Sri Lanka’s top UNESCO World Heritage Sites. Climb Sigiriya Rock Fortress, visit Dambulla Cave Temple, and enjoy expert local guidance on this unforgettable cultural adventure.",
+  keywords: [
+    "Sigiriya tour",
+    "Dambulla tour",
+    "Sri Lanka UNESCO tours",
+    "Sigiriya Rock Fortress",
+    "Dambulla Cave Temple",
+    "Cultural tours Sri Lanka",
+    "Day trips from Colombo",
+    "Ancient sites Sri Lanka"
+  ],
+  canonicalUrl: "https://yourdomain.com/tours/sigiriya-dambulla-tour",
+  structuredData: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Sigiriya & Dambulla UNESCO Heritage Day Tour",
+    "description":
+      "Discover Sri Lanka’s UNESCO World Heritage Sites on a guided day tour to Sigiriya Rock Fortress and Dambulla Cave Temple. Includes expert guide, transfers, and skip-the-line entry.",
+    "image": [
+      "https://yourcdn.com/images/sigiriya-view.jpg",
+      "https://yourcdn.com/images/dambulla-interior.jpg"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "120",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "touristType": "Cultural",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Your Brand Name",
+      "url": "https://yourdomain.com"
+    }
+  }),
+  dateCreated: "2025-05-13",
+  dateModified: "2025-05-13",
+  author: "Your Brand Name",
+  category: "Cultural Tours"
+};

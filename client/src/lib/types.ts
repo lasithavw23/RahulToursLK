@@ -10,29 +10,29 @@ export interface Tour {
   id: number;
   slug: string;
   title: string;
-  description: string;
   shortDescription: string;
+  description: string;
   imageUrl: string;
   rating: number;
   price: number;
   duration: number;
-  isFeatured?: boolean;
+  isFeatured: boolean;
   places: Place[];
-  mapLink?: string;
+  mapLink: string;
   gallery: string[];
   
-  // SEO Optimization Fields
+  // SEO Fields
   metaTitle: string;
   metaDescription: string;
   keywords: string[];
   canonicalUrl: string;
-  structuredData?: string;
+  structuredData: string;  // Stored as a JSON string
   
-  // Additional helpful fields for SEO
-  dateCreated?: string;
-  dateModified?: string;
-  author?: string;
-  category?: string;
+  // Additional metadata
+  dateCreated: string;
+  dateModified: string;
+  author: string;
+  category: string;
 }
 
 // Destination Types

@@ -62,15 +62,15 @@ export const tours = pgTable("tours", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
   slug: text("slug").notNull().unique(),
-  description: text("description").notNull(),
   shortDescription: text("short_description").notNull(),
+  description: text("description").notNull(),
   imageUrl: text("image_url").notNull(),
   price: doublePrecision("price").notNull(),
   duration: integer("duration").notNull(),
   rating: doublePrecision("rating").notNull(),
-  isFeatured: boolean("is_featured").default(false),
+  isFeatured: boolean("is_featured").default(false).notNull(),
   places: jsonb("places").notNull(),
-  mapLink: text("map_link"),
+  mapLink: text("map_link").notNull(),
   gallery: text("gallery").array().notNull(),
   
   // SEO Fields
@@ -78,13 +78,13 @@ export const tours = pgTable("tours", {
   metaDescription: text("meta_description").notNull(),
   keywords: text("keywords").array().notNull(),
   canonicalUrl: text("canonical_url").notNull(),
-  structuredData: text("structured_data"),
+  structuredData: text("structured_data").notNull(),
   
-  // Additional SEO Fields
-  dateCreated: timestamp("date_created").defaultNow().notNull(),
-  dateModified: timestamp("date_modified").defaultNow().notNull(),
-  author: text("author"),
-  category: text("category"),
+  // Additional metadata
+  dateCreated: text("date_created").notNull(),
+  dateModified: text("date_modified").notNull(),
+  author: text("author").notNull(),
+  category: text("category").notNull(),
   
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
@@ -96,8 +96,8 @@ export const toursRelations = relations(tours, ({ many }) => ({
 export const insertTourSchema = createInsertSchema(tours).pick({
   title: true,
   slug: true,
-  description: true,
   shortDescription: true,
+  description: true,
   imageUrl: true,
   price: true,
   duration: true,
@@ -111,6 +111,8 @@ export const insertTourSchema = createInsertSchema(tours).pick({
   keywords: true,
   canonicalUrl: true,
   structuredData: true,
+  dateCreated: true,
+  dateModified: true,
   author: true,
   category: true,
 });
