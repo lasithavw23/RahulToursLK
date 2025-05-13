@@ -4,6 +4,7 @@ export interface Place {
   imagePreview: string;
   shortDescription: string;
   description: string;
+  slug?: string; // Optional since it will be generated on the fly
 }
 
 export interface Tour {

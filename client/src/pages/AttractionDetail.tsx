@@ -15,13 +15,13 @@ export default function AttractionDetail() {
   const [showBookingModal, setShowBookingModal] = useState(false);
   
   // Fetch all tours to find the attraction and related tours
-  const { data: tours, isLoading, error } = useQuery({
+  const { data: tours = [], isLoading, error } = useQuery<Tour[]>({
     queryKey: ['/api/tours'],
     enabled: true,
   });
 
   useEffect(() => {
-    if (tours && slug) {
+    if (tours && tours.length > 0 && slug) {
       // Find the attraction by comparing slugified titles
       const foundAttraction = findAttractionBySlug(tours, slug);
       setAttraction(foundAttraction);
@@ -36,11 +36,13 @@ export default function AttractionDetail() {
 
   const findAttractionBySlug = (tours: Tour[], attractionSlug: string): Place | null => {
     for (const tour of tours) {
-      for (const place of tour.places) {
-        const placeSlug = place.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
-        if (placeSlug === attractionSlug) {
-          // Return the place with added slug
-          return { ...place, slug: placeSlug };
+      if (tour.places && Array.isArray(tour.places)) {
+        for (const place of tour.places) {
+          const placeSlug = place.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+          if (placeSlug === attractionSlug) {
+            // Return the place with added slug
+            return { ...place, slug: placeSlug };
+          }
         }
       }
     }
@@ -49,6 +51,7 @@ export default function AttractionDetail() {
 
   const findRelatedTours = (tours: Tour[], attraction: Place): Tour[] => {
     return tours.filter(tour => 
+      tour.places && Array.isArray(tour.places) &&
       tour.places.some(place => place.title === attraction.title)
     );
   };

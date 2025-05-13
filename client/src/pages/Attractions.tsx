@@ -8,30 +8,32 @@ export default function Attractions() {
   const [attractions, setAttractions] = useState<Place[]>([]);
   
   // Fetch all tours to extract places
-  const { data: tours, isLoading, error } = useQuery({
+  const { data: tours = [], isLoading, error } = useQuery<Tour[]>({
     queryKey: ['/api/tours'],
     enabled: true,
   });
 
   useEffect(() => {
-    if (tours) {
+    if (tours && tours.length > 0) {
       // Extract all places from all tours and create a unique set
       const allPlaces: Place[] = [];
       const slugMap = new Map<string, boolean>();
       
       tours.forEach((tour: Tour) => {
-        tour.places.forEach((place: Place) => {
-          // Create a slug from the place title for use in routing
-          const slug = place.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
-          // Check if we've already added this place
-          if (!slugMap.has(slug)) {
-            slugMap.set(slug, true);
-            allPlaces.push({
-              ...place,
-              slug // Add slug for routing
-            });
-          }
-        });
+        if (tour.places && Array.isArray(tour.places)) {
+          tour.places.forEach((place: Place) => {
+            // Create a slug from the place title for use in routing
+            const slug = place.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+            // Check if we've already added this place
+            if (!slugMap.has(slug)) {
+              slugMap.set(slug, true);
+              allPlaces.push({
+                ...place,
+                slug
+              });
+            }
+          });
+        }
       });
       
       setAttractions(allPlaces);
