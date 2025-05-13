@@ -1,0 +1,113 @@
+export const ellaTour: Tour = {
+  id: 4,
+  slug: "ella-scenic-highlands-tour",
+  title: "Ella Scenic Highlands Tour",
+  shortDescription:
+    "Discover the magic of Sri Lanka’s hill country with waterfalls, iconic bridges, panoramic hikes, and a world-famous train ride through lush tea plantations.",
+  description: `
+    Experience the breathtaking beauty of Ella on our Ella Scenic Highlands Tour-a curated journey through Sri Lanka’s most enchanting landscapes and must-see attractions. Marvel at the cascading Rawana Waterfall, one of the region’s most photogenic natural wonders. Walk across the iconic Nine Arch Bridge, a masterpiece of colonial-era engineering set amidst emerald tea fields and misty mountains.
+    
+    Embark on a rewarding hike up Little Adam’s Peak, where panoramic views of Ella Gap and rolling highlands await. Enjoy the legendary train ride from Ella Demodara to Haputale, often hailed as one of the world’s most scenic rail journeys, as you pass through tunnels, over bridges, and alongside verdant valleys. Complete your adventure with a visit to a Haputale tea plantation, where you’ll learn about Sri Lanka’s world-renowned Ceylon tea and enjoy fresh mountain air.
+    
+    This tour is perfect for nature lovers, photographers, and anyone seeking the quintessential Sri Lankan hill country experience. Enjoy expert local guidance, comfortable transfers, and unforgettable moments at every stop.
+  `,
+  imageUrl: "https://yourcdn.com/images/ella-tour-cover.jpg",
+  rating: 4.9,
+  price: 115,
+  duration: 1, // day
+  isFeatured: true,
+  places: [
+    {
+      title: "Rawana Waterfall",
+      imagePreview: "https://yourcdn.com/images/rawana-waterfall.jpg",
+      shortDescription:
+        "Marvel at one of Sri Lanka’s most famous and accessible waterfalls.",
+      description:
+        "Rawana Waterfall is a spectacular 25-meter cascade nestled amid lush greenery just outside Ella. Its dramatic drop and natural pools make it a favorite for both sightseeing and photography. Local legend links the falls to the ancient Ramayana epic, adding a touch of myth to its natural beauty."
+    },
+    {
+      title: "Nine Arch Bridge",
+      imagePreview: "https://yourcdn.com/images/nine-arch-bridge.jpg",
+      shortDescription:
+        "Walk across Ella’s iconic colonial-era railway bridge, surrounded by tea plantations.",
+      description:
+        "The Nine Arch Bridge is a marvel of early 20th-century engineering, famous for its nine elegant stone arches and lush jungle backdrop. Watch the blue train pass overhead for a classic Ella photo opportunity, or stroll the nearby trails for the best views of this architectural gem."
+    },
+    {
+      title: "Little Adam’s Peak",
+      imagePreview: "https://yourcdn.com/images/little-adams-peak.jpg",
+      shortDescription:
+        "Hike to panoramic viewpoints overlooking the Ella Gap and highlands.",
+      description:
+        "Little Adam’s Peak offers an accessible trek with rewarding vistas of Ella’s rolling hills, tea estates, and distant mountain ranges. The gentle ascent is suitable for all fitness levels, making it one of Ella’s most popular attractions for sunrise or sunset."
+    },
+    {
+      title: "Scenic Train Ride (Ella Demodara to Haputale)",
+      imagePreview: "https://yourcdn.com/images/ella-train-ride.jpg",
+      shortDescription:
+        "Ride the world-famous hill country train through tunnels, bridges, and tea fields.",
+      description:
+        "Board the train at Ella or Demodara for an unforgettable journey to Haputale, passing over the Nine Arch Bridge and through the engineering marvel of the Demodara Loop. This route is celebrated for its breathtaking scenery, cool mountain air, and authentic Sri Lankan rail experience."
+    },
+    {
+      title: "Haputale Tea Plantation",
+      imagePreview: "https://yourcdn.com/images/haputale-tea.jpg",
+      shortDescription:
+        "Tour a working tea estate and sample fresh Ceylon tea in the highlands.",
+      description:
+        "Haputale’s tea plantations are famed for producing some of Sri Lanka’s finest Ceylon tea. Walk through lush green fields, learn about the tea-making process from plucking to brewing, and enjoy tastings with sweeping views of the misty hills."
+    }
+  ],
+  mapLink:
+    "https://www.google.com/maps/d/embed?mid=1kUeMB-ella-tour-map&hl=en",
+  gallery: [
+    "https://yourcdn.com/images/ella-nine-arch-bridge.jpg",
+    "https://yourcdn.com/images/ella-rawana-falls.jpg",
+    "https://yourcdn.com/images/ella-little-adams-peak.jpg",
+    "https://yourcdn.com/images/ella-train-ride.jpg",
+    "https://yourcdn.com/images/haputale-tea-plantation.jpg"
+  ],
+  metaTitle:
+    "Ella Scenic Highlands Tour | Nine Arch Bridge, Rawana Waterfall, Little Adam’s Peak & Train Ride",
+  metaDescription:
+    "Book the Ella Scenic Highlands Tour to explore Rawana Waterfall, Nine Arch Bridge, Little Adam’s Peak, a scenic train ride to Haputale, and a tea plantation visit. Discover the best of Sri Lanka’s hill country in one day.",
+  keywords: [
+    "Ella tour",
+    "Nine Arch Bridge Ella",
+    "Rawana Waterfall",
+    "Little Adam’s Peak hike",
+    "Ella to Haputale train",
+    "Haputale tea plantation",
+    "Sri Lanka hill country tours",
+    "Ella attractions"
+  ],
+  canonicalUrl: "https://yourdomain.com/tours/ella-scenic-highlands-tour",
+  structuredData: JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Ella Scenic Highlands Tour",
+    "description":
+      "Experience Ella’s top attractions including Rawana Waterfall, Nine Arch Bridge, Little Adam’s Peak, a scenic train ride to Haputale, and a tea plantation tour. The ultimate Sri Lanka hill country adventure.",
+    "image": [
+      "https://yourcdn.com/images/ella-nine-arch-bridge.jpg",
+      "https://yourcdn.com/images/ella-rawana-falls.jpg",
+      "https://yourcdn.com/images/ella-little-adams-peak.jpg"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "115",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "touristType": "Nature",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Your Brand Name",
+      "url": "https://yourdomain.com"
+    }
+  }),
+  dateCreated: "2025-05-13",
+  dateModified: "2025-05-13",
+  author: "Your Brand Name",
+  category: "Nature & Scenic Tours"
+};
