@@ -1,13 +1,15 @@
 // Images
 import sigiriyaRomanticMoment from "../assets/imgs/sigiriya_romantic_moment.webp";
 import safariElephants from "../assets/imgs/sri_lanka_safari_elephants_watching.webp";
+import beachParadise from "../assets/imgs/beach_paradise_Sri_Lanka.webp";
+import ellaTrain from "../assets/imgs/ella_train_ride_sri_lanka.webp";
 
 export const HERO_IMAGES = [
   sigiriyaRomanticMoment,
   safariElephants,
+  beachParadise,
+  ellaTrain,
   "https://pixabay.com/get/g2a5074338a2b6823a7d567b75986089770057a9900a1e3ef063d9be676ff3b5d0ef8406e9309796f7e5149aba4b088877e024536e4cc407874f70a16d52a9767_1280.jpg",
-  "https://pixabay.com/get/gd1ec97f470381dddb4bdf5755bf7543efd50cb84613b8787fd2f124749ef6409cc4b473d5f6a52354076ffbf59e5969ea9987f8f42b870494619aaf87bd1a3fe_1280.jpg",
-  "https://pixabay.com/get/g16d294b5389cfbbf074e9636686dda03ecca8ae253bf30c6b487956520834c19d875cbc8dd3812c526dff9a5ed1535766b0095e1b84f3d95d2b940e05331ceca_1280.jpg",
 ];
 
 export const CTA_IMAGE =
