@@ -186,6 +186,107 @@ export class MemStorage implements IStorage {
         dateModified: "2025-05-13",
         author: "Travel Sri Lanka",
         category: "Cultural Tours"
+      },
+      {
+        title: "Galle Heritage Explorer Tour",
+        slug: "galle-heritage-explorer-tour",
+        shortDescription: "Journey through Sri Lanka's colonial past, vibrant culture, and coastal wonders with our immersive Galle Heritage Explorer Tour.",
+        description: `Discover the best of Sri Lanka's southern coast on our Galle Heritage Explorer Tour-a curated day trip that blends history, culture, and natural beauty. Step back in time at the UNESCO-listed Galle Fort, Asia's best-preserved colonial fortress, where cobblestone streets, Dutch and British architecture, and panoramic ocean views await. Witness the iconic stilt fishermen balancing above the waves, a living tradition unique to the region.
+
+    Visit the scenic Handugala Tea Plantation and Factory in Ahangama to learn about Sri Lanka's world-famous Ceylon tea, from leaf to cup. At the Habaraduwa Turtle Hatchery, engage with vital marine conservation efforts and, if lucky, help release baby turtles into the sea. Reflect on resilience and remembrance at the Tsunami Museum (optional), honoring the lives and stories shaped by the 2004 disaster. Conclude your journey atop the lush Roomassala headland, offering breathtaking views.
+
+    This expertly guided tour is perfect for history enthusiasts, nature lovers, and anyone seeking an authentic Sri Lankan experience. Enjoy comfortable transfers, insightful commentary, and unforgettable moments at every stop.`,
+        imageUrl: "https://yourcdn.com/images/galle-tour-cover.jpg",
+        rating: 4.9,
+        price: 110,
+        duration: 1,
+        isFeatured: true,
+        places: [
+          {
+            title: "Galle Fort",
+            imagePreview: "https://yourcdn.com/images/galle-fort.jpg",
+            shortDescription: "Explore Sri Lanka's UNESCO World Heritage fortress with centuries of colonial history.",
+            description: "Galle Fort, a UNESCO World Heritage Site, is a remarkable fortified city on Sri Lanka's southwest coast. Built by the Portuguese in 1588 and extensively fortified by the Dutch in the 17th century, it showcases a unique blend of European architecture and South Asian traditions. Wander its well-preserved ramparts, bastions, and grid-patterned streets lined with colonial-era churches, mosques, and boutique shops. The fort's rich history, vibrant present-day culture, and spectacular Indian Ocean views make it a must-visit destination."
+          },
+          {
+            title: "Stilt Fishermen",
+            imagePreview: "https://yourcdn.com/images/stilt-fishermen.jpg",
+            shortDescription: "Witness the iconic stilt fishermen practicing a unique and photogenic coastal tradition.",
+            description: "Experience one of Sri Lanka's most iconic sights as local fishermen balance on slender poles above the Indian Ocean's waves. This traditional fishing method, passed down through generations, offers a glimpse into the ingenuity and resilience of coastal communities. Capture unforgettable photos and learn about the challenges and history behind this living heritage."
+          },
+          {
+            title: "Handugala Tea Plantation & Factory (Ahangama)",
+            imagePreview: "https://yourcdn.com/images/handugala-tea.jpg",
+            shortDescription: "Tour a working tea plantation and discover the secrets of Ceylon tea.",
+            description: "Immerse yourself in Sri Lanka's tea culture at the Handugala Tea Plantation in Ahangama. Walk through lush tea fields, observe the plucking and processing of tea leaves, and enjoy a tasting session of freshly brewed Ceylon tea. Learn about the plantation's history and the vital role of tea in Sri Lanka's economy and heritage."
+          },
+          {
+            title: "Habaraduwa Turtle Hatchery",
+            imagePreview: "https://yourcdn.com/images/habaraduwa-turtle.jpg",
+            shortDescription: "Support marine conservation and meet rescued sea turtles at this renowned hatchery.",
+            description: "The Habaraduwa Turtle Hatchery is dedicated to the rescue, rehabilitation, and release of endangered sea turtles along Sri Lanka's southern coast. Visitors can observe various turtle species, learn about conservation efforts, and, during hatching season, participate in releasing baby turtles into the ocean. The hatchery plays a crucial role in protecting marine biodiversity and educating the public about environmental stewardship."
+          },
+          {
+            title: "Tsunami Museum (Optional)",
+            imagePreview: "https://yourcdn.com/images/tsunami-museum.jpg",
+            shortDescription: "Reflect on the 2004 tsunami's impact and Sri Lanka's remarkable recovery.",
+            description: "The Tsunami Museum offers a poignant and educational experience, documenting the devastation of the 2004 Indian Ocean tsunami and the resilience of local communities. Exhibits include photographs, survivor stories, and artifacts, providing insight into both the tragedy and the ongoing efforts to rebuild and support those affected."
+          },
+          {
+            title: "Roomassala",
+            imagePreview: "https://yourcdn.com/images/roomassala.jpg",
+            shortDescription: "Enjoy panoramic views and tranquil nature atop this legendary headland.",
+            description: "Roomassala is a scenic hill offering sweeping vistas of the Galle coastline and the Indian Ocean. Steeped in local legend and biodiversity, it's a peaceful spot for reflection, nature walks, and photography. The area is also home to the Japanese Peace Pagoda, a symbol of harmony and a popular viewpoint."
+          }
+        ],
+        mapLink: "https://www.google.com/maps/d/embed?mid=1kUeMB-galle-tour-map&hl=en",
+        gallery: [
+          "https://yourcdn.com/images/galle-fort-sunset.jpg",
+          "https://yourcdn.com/images/stilt-fishermen-action.jpg",
+          "https://yourcdn.com/images/tea-plantation-tour.jpg",
+          "https://yourcdn.com/images/turtle-hatchery-release.jpg",
+          "https://yourcdn.com/images/roomassala-view.jpg"
+        ],
+        metaTitle: "Galle Heritage Explorer Tour | UNESCO Galle Fort, Stilt Fishermen, Turtle Hatchery & More",
+        metaDescription: "Book the Galle Heritage Explorer Tour to experience the UNESCO-listed Galle Fort, iconic stilt fishermen, tea plantations, sea turtle conservation, and more. Discover the best of Sri Lanka's southern coast in one unforgettable day.",
+        keywords: [
+          "Galle Fort tour",
+          "UNESCO Galle Fort",
+          "Galle day trips",
+          "Stilt fishermen Sri Lanka",
+          "Tea plantation tours Sri Lanka",
+          "Habaraduwa turtle hatchery",
+          "Galle sightseeing",
+          "Sri Lanka cultural tours"
+        ],
+        canonicalUrl: "https://yourdomain.com/tours/galle-heritage-explorer-tour",
+        structuredData: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          "name": "Galle Heritage Explorer Tour",
+          "description": "Explore the UNESCO-listed Galle Fort, witness stilt fishermen, visit tea plantations, support turtle conservation at Habaraduwa, and more on this guided day tour of Sri Lanka's southern coast.",
+          "image": [
+            "https://yourcdn.com/images/galle-fort-sunset.jpg",
+            "https://yourcdn.com/images/stilt-fishermen-action.jpg",
+            "https://yourcdn.com/images/tea-plantation-tour.jpg"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "110",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "touristType": "Cultural",
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Your Brand Name",
+            "url": "https://yourdomain.com"
+          }
+        }),
+        dateCreated: "2025-05-13",
+        dateModified: "2025-05-13",
+        author: "Your Brand Name",
+        category: "Cultural Tours"
       }
     ];
 
