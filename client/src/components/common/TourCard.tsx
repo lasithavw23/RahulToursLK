@@ -30,7 +30,7 @@ export default function TourCard({ tour }: TourCardProps) {
             <span className="font-medium">{tour.rating.toFixed(1)}</span>
           </div>
         </div>
-        <p className="text-neutral-600 dark:text-neutral-400 mb-4 flex-grow">
+        <p className="text-neutral-600 dark:text-neutral-400 mb-4">
           {tour.shortDescription}
         </p>
         <div className="flex justify-between items-center mt-auto">
@@ -45,7 +45,7 @@ export default function TourCard({ tour }: TourCardProps) {
       </div>
       <Link
         href={`/tours/${tour.slug}`}
-        className="block bg-neutral-100 dark:bg-neutral-700 text-center py-4 text-primary dark:text-primary-light font-medium hover:bg-neutral-200 dark:hover:bg-neutral-600 transition mt-auto"
+        className="block bg-neutral-100 dark:bg-neutral-700 text-center py-4 text-primary dark:text-primary-light font-medium hover:bg-neutral-200 dark:hover:bg-neutral-600 transition"
       >
         View Details
       </Link>
